@@ -392,7 +392,7 @@ NAVIGATION — CYBERPURPLE GLOW
         .nav-bar {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 6px;
+            gap: 4px;
             padding: 6px 0 8px;
             width: 100%;
         }
@@ -2369,7 +2369,7 @@ RESPONSIVE - MOBILE (400px)
 
             .nav-bar {
                 gap: 3px;
-                padding: 3px 0 5px;
+                padding: 4px 0 5px;
             }
 
             .nav-bar .tab {
@@ -2384,15 +2384,15 @@ RESPONSIVE - MOBILE (400px)
             }
 
             .brand-title {
-                font-size: 9px;
+                font-size: 13px;
             }
 
             .wallet {
-                font-size: 7px;
-                padding: 2px 6px;
-                min-width: 50px;
-                max-width: 70px;
-                box-shadow: 0 2px 0 rgba(0, 0, 0, 0.6), 0 0 10px rgba(168, 85, 247, 0.02);
+                min-width: 100px;
+                max-width: 130px;
+                padding: 6px 10px;
+                font-size: 10px;
+                box-shadow: 0 2px 0 rgba(1, 248, 1, 0.6), 0 0 10px rgba(29, 5, 243, 0.962);
             }
         }
 
@@ -2589,6 +2589,1065 @@ CALCULATOR - RESPONSIVE
                 grid-template-columns: 1fr 1fr !important;
             }
         }
+
+        /* ============================================================
+   FINAL MOBILE UX OVERRIDES
+   Human-readable sizing for phones
+   These rules intentionally override the older compact/mobile rules above.
+   ============================================================ */
+
+        :root {
+            --font-base: 16px;
+            --header-height: 58px;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 1.55;
+            overflow-x: hidden;
+        }
+
+        button,
+        .btn,
+        input,
+        select {
+            touch-action: manipulation;
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 32px));
+        }
+
+        /* ---------- Header ---------- */
+
+        .header-top {
+            min-height: 58px;
+            padding: 8px 0;
+        }
+
+        .brand {
+            gap: 10px;
+        }
+
+        .brand-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+        }
+
+        .brand-title {
+            font-size: 16px;
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            line-height: 1.25;
+        }
+
+        .wallet {
+            min-width: 112px;
+            max-width: 220px;
+            padding: 9px 14px;
+            font-size: 13px;
+            line-height: 1.3;
+            border-radius: 10px;
+        }
+
+        /* ---------- Navigation ---------- */
+
+        .nav-bar {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 8px 0 10px;
+            scrollbar-width: thin;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-bar.has-owner {
+            display: flex;
+        }
+
+        .nav-bar .tab,
+        .nav-bar.has-owner .tab {
+            flex: 0 0 auto;
+            min-width: 92px;
+            min-height: 44px !important;
+            padding: 10px 13px;
+            font-size: 13px;
+            line-height: 1.2;
+            border-radius: 11px;
+            gap: 7px;
+        }
+
+        .nav-bar .tab i {
+            font-size: 15px;
+        }
+
+        main {
+            padding: 18px 0 36px;
+        }
+
+        /* ---------- Hero ---------- */
+
+        .hero {
+            border-radius: 18px;
+        }
+
+        .hero .slides,
+        .hero .slide {
+            height: 270px;
+        }
+
+        .slide {
+            padding: 22px 24px 28px;
+        }
+
+        .slide-content {
+            max-width: 620px;
+        }
+
+        .eyebrow {
+            padding: 5px 11px;
+            font-size: 11px;
+        }
+
+        .eyebrow i {
+            width: 6px;
+            height: 6px;
+        }
+
+        h1 {
+            font-size: clamp(27px, 8vw, 36px);
+            line-height: 1.08;
+            letter-spacing: -0.8px;
+            margin: 9px 0 8px;
+        }
+
+        .slide p {
+            max-width: 560px;
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .hero-actions {
+            gap: 9px;
+            margin-top: 14px;
+        }
+
+        .hero-actions button {
+            min-height: 42px;
+            padding: 9px 15px;
+            font-size: 13px;
+        }
+
+        /* ---------- General buttons ---------- */
+
+        button,
+        .btn {
+            min-height: 44px;
+            padding: 10px 17px;
+            border-radius: 11px;
+            font-size: 14px;
+            line-height: 1.25;
+        }
+
+        /* ---------- Stats ---------- */
+
+        .stats {
+            gap: 9px;
+            margin-top: 12px;
+        }
+
+        .stat {
+            min-height: 78px;
+            padding: 13px 14px;
+            border-radius: 14px;
+        }
+
+        .stat label {
+            font-size: 10px;
+            letter-spacing: .55px;
+        }
+
+        .stat strong {
+            margin-top: 5px;
+            font-size: 19px;
+        }
+
+        /* ---------- Panels ---------- */
+
+        .cols {
+            gap: 12px;
+        }
+
+        .panel {
+            padding: 17px 18px;
+            border-radius: 15px;
+        }
+
+        .panel h2 {
+            font-size: 18px;
+            line-height: 1.3;
+            margin-bottom: 11px;
+        }
+
+        .panel-title-row {
+            margin-bottom: 11px;
+        }
+
+        /* ---------- Key/value rows ---------- */
+
+        .kv {
+            grid-template-columns: minmax(0, 1fr) minmax(130px, 44%);
+            gap: 12px;
+            padding: 9px 0;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .kv span:last-child {
+            font-size: 14px;
+        }
+
+        .small {
+            font-size: 12px;
+        }
+
+        .notice {
+            padding: 11px 14px;
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .badge {
+            padding: 4px 9px;
+            font-size: 10px;
+        }
+
+        /* ---------- Forms ---------- */
+
+        .actions {
+            gap: 9px;
+        }
+
+        .form {
+            gap: 10px;
+        }
+
+        .row {
+            gap: 10px;
+        }
+
+        .label {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            min-height: 46px;
+            padding: 10px 13px;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        /* ---------- Contract ---------- */
+
+        .contract-grid {
+            gap: 10px;
+        }
+
+        .contract-item {
+            padding: 11px 13px;
+            border-radius: 13px;
+        }
+
+        .contract-item label {
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+
+        .contract-item strong {
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        /* ---------- Tokenomics ---------- */
+
+        .tokenomics-section {
+            gap: 20px;
+        }
+
+        .pie-chart {
+            width: 180px;
+            height: 180px;
+        }
+
+        .pie-center {
+            width: 68px;
+            height: 68px;
+        }
+
+        .pie-center .pct {
+            font-size: 16px;
+        }
+
+        .pie-center .label {
+            font-size: 8px;
+        }
+
+        .pie-legend {
+            gap: 8px;
+        }
+
+        .pie-legend .legend-item {
+            gap: 10px;
+            padding: 9px 12px;
+        }
+
+        .pie-legend .legend-item .color-dot {
+            width: 13px;
+            height: 13px;
+        }
+
+        .pie-legend .legend-item .legend-text {
+            font-size: 13px;
+        }
+
+        .pie-legend .legend-item .legend-pct {
+            font-size: 14px;
+        }
+
+        /* ---------- Guide ---------- */
+
+        .guide-steps {
+            gap: 10px;
+            margin: 13px 0;
+        }
+
+        .guide-step {
+            gap: 13px;
+            padding: 14px 15px;
+            border-radius: 14px;
+        }
+
+        .guide-step .step-number {
+            width: 36px;
+            height: 36px;
+            font-size: 14px;
+        }
+
+        .guide-step .step-content h4 {
+            font-size: 15px;
+            line-height: 1.35;
+        }
+
+        .guide-step .step-content p {
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .guide-step .step-content .step-action {
+            min-height: 38px;
+            margin-top: 7px;
+            padding: 7px 13px;
+            font-size: 12px;
+        }
+
+        .guide-step .step-badge {
+            top: -6px;
+            right: -4px;
+            font-size: 9px;
+            padding: 3px 8px;
+        }
+
+        .guide-benefits {
+            gap: 9px;
+            margin: 13px 0;
+        }
+
+        .guide-benefit {
+            padding: 13px 12px;
+            border-radius: 13px;
+        }
+
+        .guide-benefit .benefit-icon {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .guide-benefit h5 {
+            font-size: 13px;
+        }
+
+        .guide-benefit p {
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .guide-benefit .benefit-value {
+            margin-top: 5px;
+            padding: 3px 10px;
+            font-size: 10px;
+        }
+
+        .guide-comparison .comp-row {
+            padding: 9px 11px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .guide-comparison .comp-row.header {
+            font-size: 10px;
+        }
+
+        /* ---------- Footer ---------- */
+
+        .footer {
+            font-size: 12px;
+            margin-top: 20px;
+            padding-top: 16px;
+        }
+
+        .footer-links {
+            gap: 15px;
+            margin-bottom: 7px;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+        }
+
+        .footer-note {
+            font-size: 11px;
+        }
+
+        /* ---------- Calculator ---------- */
+
+        .calc-result-grid {
+            gap: 9px !important;
+        }
+
+        .calc-result-item {
+            padding: 11px 12px !important;
+        }
+
+        .calc-result-item .value {
+            font-size: 15px !important;
+        }
+
+        .calc-result-item.highlight .value {
+            font-size: 18px !important;
+        }
+
+        .calc-result-item .label {
+            font-size: 10px !important;
+        }
+
+        .calc-input-wrapper input {
+            min-height: 46px !important;
+            padding: 10px 4px !important;
+            font-size: 15px !important;
+        }
+
+        /* ============================================================
+   TABLET
+   ============================================================ */
+
+        @media (max-width: 768px) {
+            .wrap {
+                width: min(100% - 28px, 1120px);
+            }
+
+            .header-top {
+                min-height: 56px;
+                padding: 7px 0;
+            }
+
+            .brand-logo {
+                width: 34px;
+                height: 34px;
+            }
+
+            .brand-title {
+                font-size: 15px;
+            }
+
+            .brand-sub {
+                font-size: 10px;
+            }
+
+            .wallet {
+                min-width: 105px;
+                max-width: 190px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .nav-bar,
+            .nav-bar.has-owner {
+                display: flex;
+                gap: 7px;
+                padding: 8px 0 10px;
+                overflow-x: auto;
+            }
+
+            .nav-bar .tab,
+            .nav-bar.has-owner .tab {
+                min-width: 92px;
+                min-height: 43px !important;
+                padding: 9px 12px;
+                font-size: 13px;
+            }
+
+            .nav-bar .tab i {
+                font-size: 15px;
+            }
+
+            .hero .slides,
+            .hero .slide {
+                height: 260px;
+            }
+
+            .slide {
+                padding: 20px 20px 24px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .slide p {
+                font-size: 14px;
+            }
+
+            button,
+            .btn {
+                min-height: 44px;
+                font-size: 14px;
+            }
+        }
+
+        /* ============================================================
+   PHONE
+   ============================================================ */
+
+        @media (max-width: 600px) {
+            .wrap {
+                width: calc(100% - 24px);
+            }
+
+            main {
+                padding-top: 12px;
+                padding-bottom: 32px;
+            }
+
+            .header-top {
+                min-height: 56px;
+            }
+
+            .brand {
+                min-width: 0;
+                gap: 9px;
+            }
+
+            .brand-logo {
+                width: 32px;
+                height: 32px;
+            }
+
+            .brand-title {
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .brand-sub {
+                font-size: 9px;
+                max-width: 150px;
+            }
+
+            .wallet {
+                min-width: 100px;
+                max-width: 155px;
+                padding: 8px 11px;
+                font-size: 12px;
+            }
+
+            .nav-bar,
+            .nav-bar.has-owner {
+                margin-left: -2px;
+                width: calc(100% + 4px);
+                gap: 7px;
+                padding: 8px 2px 10px;
+                overflow-x: auto;
+                overscroll-behavior-x: contain;
+                scrollbar-width: none;
+            }
+
+            .nav-bar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .nav-bar .tab,
+            .nav-bar.has-owner .tab {
+                min-width: 88px;
+                min-height: 44px !important;
+                padding: 10px 11px;
+                font-size: 13px;
+                border-radius: 11px;
+            }
+
+            .nav-bar .tab i {
+                font-size: 15px;
+            }
+
+            .hero {
+                border-radius: 16px;
+            }
+
+            .hero .slides,
+            .hero .slide {
+                height: 265px;
+            }
+
+            .slide {
+                padding: 20px 18px 24px;
+                align-items: flex-end;
+            }
+
+            .eyebrow {
+                font-size: 10px;
+                padding: 4px 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+                line-height: 1.08;
+                margin: 8px 0 8px;
+            }
+
+            .slide p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .hero-actions {
+                gap: 8px;
+                margin-top: 13px;
+            }
+
+            .hero-actions button {
+                min-height: 42px;
+                padding: 9px 13px;
+                font-size: 13px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+                margin-top: 10px;
+            }
+
+            .stat {
+                min-height: 76px;
+                padding: 12px 13px;
+            }
+
+            .stat label {
+                font-size: 10px;
+            }
+
+            .stat strong {
+                font-size: 18px;
+            }
+
+            .cols {
+                grid-template-columns: 1fr;
+                gap: 11px;
+            }
+
+            .panel {
+                padding: 15px 16px;
+            }
+
+            .panel h2 {
+                font-size: 17px;
+            }
+
+            .kv {
+                grid-template-columns: minmax(0, 1fr) minmax(115px, 44%);
+                gap: 10px;
+                padding: 9px 0;
+                font-size: 14px !important;
+            }
+
+            .kv span:last-child {
+                font-size: 14px !important;
+            }
+
+            .notice {
+                font-size: 13px;
+                padding: 10px 13px;
+            }
+
+            .badge {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .label {
+                font-size: 12px;
+            }
+
+            input,
+            select {
+                min-height: 46px;
+                font-size: 15px;
+            }
+
+            .contract-grid {
+                grid-template-columns: 1fr;
+                gap: 9px;
+            }
+
+            .contract-item {
+                padding: 11px 12px;
+            }
+
+            .contract-item label {
+                font-size: 10px;
+            }
+
+            .contract-item strong {
+                font-size: 13px;
+            }
+
+            .tokenomics-section {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .pie-chart {
+                width: 170px;
+                height: 170px;
+            }
+
+            .pie-center {
+                width: 66px;
+                height: 66px;
+            }
+
+            .pie-center .pct {
+                font-size: 16px;
+            }
+
+            .pie-center .label {
+                font-size: 8px;
+            }
+
+            .guide-benefits {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .guide-step {
+                flex-direction: row;
+                gap: 12px;
+                padding: 13px 14px;
+            }
+
+            .guide-step .step-number {
+                width: 34px;
+                height: 34px;
+                font-size: 13px;
+            }
+
+            .guide-step .step-content h4 {
+                font-size: 14px;
+            }
+
+            .guide-step .step-content p {
+                font-size: 13px;
+            }
+
+            .guide-comparison {
+                overflow-x: auto;
+            }
+
+            .guide-comparison .comp-row {
+                min-width: 430px;
+                padding: 8px 10px;
+                font-size: 11px;
+            }
+
+            button,
+            .btn {
+                min-height: 44px;
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .actions {
+                gap: 8px;
+            }
+
+            .footer {
+                font-size: 11px;
+            }
+
+            .footer-links a {
+                font-size: 12px;
+            }
+        }
+
+        /* ============================================================
+   SMALL PHONE
+   ============================================================ */
+
+        @media (max-width: 400px) {
+            .wrap {
+                width: calc(100% - 20px);
+            }
+
+            .header-top {
+                min-height: 54px;
+            }
+
+            .brand-logo {
+                width: 30px;
+                height: 30px;
+            }
+
+            .brand-title {
+                font-size: 14px;
+            }
+
+            .brand-sub {
+                font-size: 9px;
+                max-width: 125px;
+            }
+
+            .wallet {
+                min-width: 94px;
+                max-width: 140px;
+                padding: 8px 10px;
+                font-size: 11px;
+            }
+
+            .nav-bar .tab,
+            .nav-bar.has-owner .tab {
+                min-width: 84px;
+                min-height: 44px !important;
+                padding: 10px 9px;
+                font-size: 12px;
+            }
+
+            .nav-bar .tab i {
+                font-size: 14px;
+            }
+
+            .hero .slides,
+            .hero .slide {
+                height: 255px;
+            }
+
+            .slide {
+                padding: 18px 16px 22px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .slide p {
+                font-size: 13px;
+            }
+
+            .hero-actions {
+                gap: 7px;
+            }
+
+            .hero-actions button {
+                min-height: 42px;
+                font-size: 12px;
+                padding: 9px 11px;
+            }
+
+            .stats {
+                gap: 7px;
+            }
+
+            .stat {
+                min-height: 72px;
+                padding: 11px 12px;
+            }
+
+            .stat label {
+                font-size: 9px;
+            }
+
+            .stat strong {
+                font-size: 17px;
+            }
+
+            .panel {
+                padding: 14px 14px;
+            }
+
+            .panel h2 {
+                font-size: 16px;
+            }
+
+            .kv {
+                grid-template-columns: minmax(0, 1fr) minmax(105px, 46%);
+                font-size: 13px !important;
+            }
+
+            .kv span:last-child {
+                font-size: 13px !important;
+            }
+
+            .notice {
+                font-size: 12px;
+            }
+
+            .guide-benefits {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .guide-step {
+                padding: 12px;
+            }
+
+            .guide-step .step-number {
+                width: 32px;
+                height: 32px;
+                font-size: 12px;
+            }
+
+            .guide-step .step-content h4 {
+                font-size: 13px;
+            }
+
+            .guide-step .step-content p {
+                font-size: 12px;
+            }
+
+            .guide-comparison .comp-row {
+                min-width: 400px;
+                font-size: 10px;
+            }
+
+            .calc-result-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 7px !important;
+            }
+
+            .calc-result-item {
+                padding: 9px 10px !important;
+            }
+
+            .calc-result-item .value {
+                font-size: 14px !important;
+            }
+
+            .calc-result-item.highlight .value {
+                font-size: 17px !important;
+            }
+
+            .calc-result-item .label {
+                font-size: 9px !important;
+            }
+        }
+
+        /* ============================================================
+   VERY SMALL DEVICES
+   Keep text readable; allow horizontal navigation instead of
+   squeezing six/seven tabs into unreadable widths.
+   ============================================================ */
+
+        @media (max-width: 340px) {
+            .wrap {
+                width: calc(100% - 16px);
+            }
+
+            .brand-title {
+                font-size: 13px;
+            }
+
+            .brand-sub {
+                display: none;
+            }
+
+            .wallet {
+                min-width: 88px;
+                font-size: 11px;
+            }
+
+            .nav-bar .tab,
+            .nav-bar.has-owner .tab {
+                min-width: 82px;
+                font-size: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .slide p {
+                font-size: 13px;
+            }
+
+            .stat strong {
+                font-size: 16px;
+            }
+        }
+
+        /* ============================================================
+   ACCESSIBILITY / TOUCH
+   ============================================================ */
+
+        @media (hover: none) and (pointer: coarse) {
+
+            button:hover:not(:disabled),
+            .btn:hover:not(:disabled),
+            .nav-bar .tab:hover {
+                transform: none;
+            }
+
+            button,
+            .btn,
+            .nav-bar .tab,
+            .wallet {
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 
@@ -2602,9 +3661,7 @@ CALCULATOR - RESPONSIVE
             <!-- Logo + Wallet -->
             <div class="header-top">
                 <div class="brand" onclick="showTab('dashboard')">
-                    <img class="brand-logo"
-                        src="https://recehstaking.github.io/images/RECEH.png"
-                        alt="Token RECEH">
+                    <img class="brand-logo" src="https://recehstaking.github.io/images/RECEH.png" alt="Token RECEH">
                     <div>
                         <div class="brand-title">Receh Staking</div>
                         <div class="brand-sub">Platform staking Web3 untuk token $RECEH</div>
@@ -2625,11 +3682,11 @@ CALCULATOR - RESPONSIVE
                 <button class="tab" data-tab="stake">
                     <i class="fa-solid fa-piggy-bank"></i> Staking
                 </button>
-                <button class="tab" data-tab="calculator">
-                    <i class="fa-solid fa-calculator"></i> Estimator
-                </button>
                 <button class="tab" data-tab="network">
                     <i class="fa-solid fa-network-wired"></i> Referral
+                </button>
+                <button class="tab" data-tab="calculator">
+                    <i class="fa-solid fa-calculator"></i> Estimator
                 </button>
                 <button class="tab" data-tab="about">
                     <i class="fa-solid fa-info-circle"></i> Tentang
@@ -2920,6 +3977,37 @@ CALCULATOR - RESPONSIVE
         </section>
 
         <!-- ============================================================
+        SECTION: REFERRAL
+        ============================================================ -->
+        <section id="network" class="section">
+            <div class="cols">
+                <div class="panel">
+                    <div class="panel-title-row">
+                        <h2>Pusat Referral</h2>
+                        <span class="badge">On-chain</span>
+                    </div>
+                    <div class="kv"><span>Alamat Anda</span><span id="myAddress">—</span></div>
+                    <div class="kv"><span>Referrer Anda</span><span id="nReferrer">—</span></div>
+                    <div class="kv"><span>Status Pemimpin</span><span id="nLeader">—</span></div>
+                    <button id="copyReferral" style="margin-top:8px;font-size:10px;padding:6px 14px;min-height:30px;"><i
+                            class="fa-regular fa-copy"></i>&nbsp;Salin Tautan Referral</button>
+                    <div class="small muted" style="margin-top:6px;font-size:9px;">Alamat dompet Anda ditambahkan ke URL
+                        referral.</div>
+                </div>
+                <div class="panel">
+                    <div class="panel-title-row">
+                        <h2>Level Bonus Referral</h2>
+                        <span class="badge blue">Data kontrak</span>
+                    </div>
+                    <div id="levels">Hubungkan dompet Anda untuk membaca level saat ini.</div>
+                    <div class="small muted" style="margin-top:6px;font-size:9px;color:var(--muted2);">
+                        <i class="fa-solid fa-info-circle"></i>&nbsp;Level 1 = downline langsung Anda.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
         SECTION: CALCULATOR
         ============================================================ -->
         <section id="calculator" class="section">
@@ -3052,37 +4140,6 @@ CALCULATOR - RESPONSIVE
                                 style="font-size:20px;display:block;margin-bottom:6px;"></i>
                             Masukkan parameter dan klik <strong>"Hitung"</strong>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================
-        SECTION: REFERRAL
-        ============================================================ -->
-        <section id="network" class="section">
-            <div class="cols">
-                <div class="panel">
-                    <div class="panel-title-row">
-                        <h2>Pusat Referral</h2>
-                        <span class="badge">On-chain</span>
-                    </div>
-                    <div class="kv"><span>Alamat Anda</span><span id="myAddress">—</span></div>
-                    <div class="kv"><span>Referrer Anda</span><span id="nReferrer">—</span></div>
-                    <div class="kv"><span>Status Pemimpin</span><span id="nLeader">—</span></div>
-                    <button id="copyReferral" style="margin-top:8px;font-size:10px;padding:6px 14px;min-height:30px;"><i
-                            class="fa-regular fa-copy"></i>&nbsp;Salin Tautan Referral</button>
-                    <div class="small muted" style="margin-top:6px;font-size:9px;">Alamat dompet Anda ditambahkan ke URL
-                        referral.</div>
-                </div>
-                <div class="panel">
-                    <div class="panel-title-row">
-                        <h2>Level Bonus Referral</h2>
-                        <span class="badge blue">Data kontrak</span>
-                    </div>
-                    <div id="levels">Hubungkan dompet Anda untuk membaca level saat ini.</div>
-                    <div class="small muted" style="margin-top:6px;font-size:9px;color:var(--muted2);">
-                        <i class="fa-solid fa-info-circle"></i>&nbsp;Level 1 = downline langsung Anda.
                     </div>
                 </div>
             </div>
