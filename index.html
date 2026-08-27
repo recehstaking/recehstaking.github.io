@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="https://recehstaking.github.io/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://recehstaking.github.io/images/favicon.png">
     <meta name="viewport"
         content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1.0,user-scalable=no">
     <meta name="theme-color" content="#070910">
@@ -473,7 +473,7 @@
         .wallet.red {
             background: var(--red-bg);
             border-color: var(--red-border);
-            color: #ffffff !important;
+            color: var(--red-light) !important;
         }
 
         .wallet.green {
@@ -653,15 +653,9 @@
 
         .hero {
             position: relative;
-
-            overflow: hidden;
-
             border: 1px solid var(--line);
-
             border-radius: var(--radius-xl);
-
             background: #0d141c;
-
             box-shadow: var(--shadow);
         }
 
@@ -682,45 +676,25 @@
             z-index: 1;
         }
 
-        .slides {
-            display: flex;
-
-            width: 100%;
-            height: 250px;
-
-            transition: transform .45s ease;
-        }
-
-        .slide {
-            position: relative;
-
-            min-width: 100%;
-            height: 250px;
-
-            display: flex;
-            align-items: center;
-
-            padding: 20px;
-
-            overflow: hidden;
-        }
-
-        .slide-bg {
+        .hero-bg {
             position: absolute;
             inset: 0;
-
             background-position: center;
             background-size: cover;
-
             opacity: .62;
+            z-index: 0;
         }
 
-        .slide-content {
+        .hero-content {
             position: relative;
             z-index: 2;
-
             width: 100%;
             max-width: 610px;
+            padding: 20px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .eyebrow {
@@ -765,16 +739,6 @@
             line-height: 1.05;
 
             letter-spacing: -1px;
-        }
-
-        .slide p {
-            max-width: 560px;
-
-            color: #c9d3dd;
-
-            font-size: 12px;
-
-            line-height: 1.55;
         }
 
         .hero-actions {
@@ -3269,21 +3233,16 @@
                 border-radius: 14px;
             }
 
-            .hero .slides,
-            .hero .slide {
-                height: 245px;
+            .hero {
+                min-height: 245px;
             }
 
-            .slide {
-                align-items: flex-end;
-
+            .hero-content {
                 padding: 16px 16px 20px;
+            }
 
-                background:
-                    linear-gradient(0deg,
-                        rgba(8, 11, 16, .97),
-                        rgba(8, 11, 16, .68) 62%,
-                        rgba(8, 11, 16, .20));
+            .hero-bg {
+                opacity: .55;
             }
 
             h1 {
@@ -3292,12 +3251,6 @@
                 line-height: 1.06;
 
                 letter-spacing: -.5px;
-            }
-
-            .slide p {
-                font-size: 10px;
-
-                line-height: 1.5;
             }
 
             .eyebrow {
@@ -3660,21 +3613,8 @@
                 font-size: 10px;
             }
 
-            .hero .slides,
-            .hero .slide {
-                height: 225px;
-            }
-
-            .slide {
-                padding: 13px 13px 17px;
-            }
-
             h1 {
                 font-size: 23px;
-            }
-
-            .slide p {
-                font-size: 9px;
             }
 
             .hero-actions button {
@@ -3912,21 +3852,8 @@
                 font-size: 10px;
             }
 
-            .hero .slides,
-            .hero .slide {
-                height: 265px;
-            }
-
-            .slide {
-                padding: 24px 28px;
-            }
-
             h1 {
                 font-size: 38px;
-            }
-
-            .slide p {
-                font-size: 13px;
             }
 
             .stats {
@@ -4127,52 +4054,19 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
 
         <!-- HERO -->
         <section class="hero">
-            <div class="slides" id="slides">
-                <article class="slide">
-                    <div class="slide-bg"
-                        style="background-image:url('https://recehstaking.github.io/images/receh-staking-banner.webp')">
-                    </div>
-                    <div class="slide-content">
-                        <span class="eyebrow"><i></i>BNB Smart Chain • $RECEH</span>
-                        <h1>Stake RECEH.</h1>
-                        <p>Start staking $RECEH through the smart contract on BNB Smart Chain. Monitor your
-                            on-chain
-                            staking position and claim ROI as well as qualifying referral bonuses directly from your
-                            Web3 wallet.</p>
-                        <div class="hero-actions">
-                            <button class="primary" data-tab="stake">Start Staking</button>
-                            <button data-tab="guide">How It Works</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="slide">
-                    <div class="slide-bg"
-                        style="background-image:url('https://recehstaking.github.io/images/receh-token-banner.webp')">
-                    </div>
-                    <div class="slide-content">
-                        <span class="eyebrow"><i></i>Referral System</span>
-                        <h1>Build Your Network.</h1>
-                        <p>Share your referral link with other users and earn referral bonuses and leader bonuses
-                            according to the rules enforced by the smart contract.</p>
-                        <div class="hero-actions">
-                            <button class="primary" data-tab="network">Referral Hub</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="slide">
-                    <div class="slide-bg"
-                        style="background-image:url('https://recehstaking.github.io/images/receh-web3-banner.webp')">
-                    </div>
-                    <div class="slide-content">
-                        <span class="eyebrow"><i></i>Web3 Wallet</span>
-                        <h1>Connect. Stake. Claim.</h1>
-                        <p>Connect your Web3 wallet to interact with the smart contract. The app never asks for your
-                            seed phrase, recovery phrase, or private key.</p>
-                        <div class="hero-actions">
-                            <button class="primary" id="heroConnect">Connect Wallet</button>
-                        </div>
-                    </div>
-                </article>
+            <div class="hero-bg"
+                style="background-image:url('https://recehstaking.github.io/images/receh-staking-banner.webp')">
+            </div>
+            <div class="hero-content">
+                <span class="eyebrow"><i></i>BNB Smart Chain • $RECEH</span>
+                <h1>Stake RECEH.</h1>
+                <p>Start staking $RECEH through the smart contract on BNB Smart Chain. Monitor your
+                    on-chain staking position and claim ROI as well as qualifying referral bonuses directly from your
+                    Web3 wallet.</p>
+                <div class="hero-actions">
+                    <button class="primary" data-tab="stake">Start Staking</button>
+                    <button data-tab="guide">How It Works</button>
+                </div>
             </div>
         </section>
 
@@ -6675,15 +6569,10 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
             // HERO
             // ============================================================
             function setupHero() {
-                let i = 0;
-                const slides = $('slides');
-                if (!slides) return;
-                const go = n => {
-                    i = (n + 3) % 3;
-                    slides.style.transform = `translateX(-${i * 100}%)`;
-                };
-                $('heroConnect').addEventListener('click', connect);
-                setInterval(() => go(i + 1), 7000);
+                const heroConnect = $('heroConnect');
+                if (heroConnect) {
+                    heroConnect.addEventListener('click', connect);
+                }
             }
 
             // ============================================================
