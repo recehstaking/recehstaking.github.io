@@ -7,44 +7,47 @@
     <meta name="viewport"
         content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1.0,user-scalable=no">
     <meta name="theme-color" content="#070910">
-    <title>Receh Staking · ROI & Referral Rewards</title>
+    <title>RECEH Staking ROI & Referral Rewards</title>
 
     <meta name="description"
-        content="Receh Staking is a crypto staking platform on BNB Smart Chain. Stake RECEH, track on-chain rewards, and earn eligible referral bonuses.">
+        content="Explore RECEH Staking ROI and referral rewards on BNB Smart Chain. Stake RECEH, track daily rewards, and view eligible referral earnings on-chain.">
+
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
     <meta name="author" content="Receh Staking">
+
     <link rel="canonical" href="https://recehstaking.github.io/">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Receh Staking · ROI & Referral Rewards">
+    <meta property="og:title" content="RECEH Staking ROI & Referral Rewards">
     <meta property="og:description"
-        content="Receh Staking is a crypto staking platform on BNB Smart Chain. Stake RECEH, track on-chain rewards, and earn eligible referral bonuses.">
+        content="Explore RECEH Staking ROI and referral rewards on BNB Smart Chain. Stake RECEH, track daily rewards, and view eligible referral earnings on-chain.">
     <meta property="og:url" content="https://recehstaking.github.io/">
     <meta property="og:site_name" content="Receh Staking">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://recehstaking.github.io/images/receh-staking-banner.webp">
-    <meta property="og:image:alt" content="RECEH Token Staking Platform on BNB Smart Chain">
+    <meta property="og:image:alt" content="RECEH Staking on BNB Smart Chain">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Receh Staking · ROI & Referral Rewards">
+    <meta name="twitter:title" content="RECEH Staking ROI & Referral Rewards">
     <meta name="twitter:description"
-        content="Receh Staking is a crypto staking platform on BNB Smart Chain. Stake RECEH, track on-chain rewards, and earn eligible referral bonuses.">
+        content="Explore RECEH Staking ROI and referral rewards on BNB Smart Chain. Stake RECEH, track daily rewards, and view eligible referral earnings on-chain.">
     <meta name="twitter:image" content="https://recehstaking.github.io/images/receh-staking-banner.webp">
-    <meta name="twitter:image:alt" content="Receh Staking on BNB Smart Chain">
+    <meta name="twitter:image:alt" content="RECEH Staking on BNB Smart Chain">
 
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Receh Staking",
-            "url": "https://recehstaking.github.io/",
-            "description": "Receh Staking is a crypto staking platform on BNB Smart Chain. Stake RECEH, track on-chain rewards, and earn eligible referral bonuses.",
-            "applicationCategory": "FinanceApplication",
-            "operatingSystem": "Web Browser",
-            "browserRequirements": "Requires an EVM-compatible Web3 wallet",
-            "inLanguage": "en-US"
-        }
-    </script>
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "RECEH Staking",
+    "url": "https://recehstaking.github.io/",
+    "description": "RECEH Staking platform on BNB Smart Chain with ROI and referral rewards.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web Browser",
+    "browserRequirements": "Requires an EVM-compatible Web3 wallet",
+    "inLanguage": "en-US"
+}
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/ethers@6.15.0/dist/ethers.umd.min.js">
     </script>
@@ -601,6 +604,46 @@
             color: var(--gold-light) !important;
         }
 
+        .nav-bar .tab:nth-child(1) i {
+            color: var(--gold-light) !important;
+        }
+
+        .nav-bar .tab:nth-child(2) i {
+            color: var(--green-light) !important;
+        }
+
+        .nav-bar .tab:nth-child(3) i {
+            color: var(--blue-light) !important;
+        }
+
+        .nav-bar .tab:nth-child(4) i {
+            color: #c0a9e7 !important;
+        }
+
+        .nav-bar .tab.owner-tab i {
+            color: var(--red-light) !important;
+        }
+
+        .nav-bar .tab:nth-child(1):hover:not(:disabled) {
+            border-color: var(--gold-border) !important;
+        }
+
+        .nav-bar .tab:nth-child(2):hover:not(:disabled) {
+            border-color: var(--green-border) !important;
+        }
+
+        .nav-bar .tab:nth-child(3):hover:not(:disabled) {
+            border-color: var(--blue-border) !important;
+        }
+
+        .nav-bar .tab:nth-child(4):hover:not(:disabled) {
+            border-color: var(--purple-border) !important;
+        }
+
+        .nav-bar .tab.owner-tab:hover:not(:disabled) {
+            border-color: var(--red-border) !important;
+        }
+
         .nav-bar .tab.active::after {
             content: none;
         }
@@ -653,9 +696,21 @@
 
         .hero {
             position: relative;
+
+            overflow: hidden;
+
             border: 1px solid var(--line);
+
             border-radius: var(--radius-xl);
-            background: #0d141c;
+
+            min-height: 250px;
+
+            background-color: #0d141c;
+            background-image: url("https://recehstaking.github.io/images/receh-staking-banner.webp");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
             box-shadow: var(--shadow);
         }
 
@@ -676,25 +731,11 @@
             z-index: 1;
         }
 
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background-position: center;
-            background-size: cover;
-            opacity: .62;
-            z-index: 0;
-        }
-
         .hero-content {
             position: relative;
             z-index: 2;
             width: 100%;
-            max-width: 610px;
-            padding: 20px;
-            min-height: 250px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            max-width: 690px;
         }
 
         .eyebrow {
@@ -741,6 +782,16 @@
             letter-spacing: -1px;
         }
 
+        .hero-content>p {
+            max-width: 560px;
+
+            color: #c9d3dd;
+
+            font-size: 12px;
+
+            line-height: 1.55;
+        }
+
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
@@ -748,6 +799,27 @@
             gap: 7px;
 
             margin-top: 11px;
+        }
+
+        .hero-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 10px;
+            margin-top: 10px;
+        }
+
+        .hero-points span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #b9c6d1;
+            font-size: 8px;
+            font-weight: 700;
+        }
+
+        .hero-points span i {
+            color: var(--green-light);
+            font-size: 9px;
         }
 
 
@@ -872,6 +944,17 @@
             padding: 8px 12px;
 
             font-size: 10px;
+        }
+
+        .hero-actions .hero-guide-btn {
+            background: var(--blue-dark) !important;
+            border-color: var(--blue-border) !important;
+        }
+
+        .hero-actions .hero-guide-btn:hover:not(:disabled) {
+            background: var(--blue) !important;
+            border-color: rgba(121, 195, 250, .65) !important;
+            color: #06111a !important;
         }
 
 
@@ -3233,16 +3316,13 @@
                 border-radius: 14px;
             }
 
+
             .hero {
                 min-height: 245px;
             }
 
             .hero-content {
-                padding: 16px 16px 20px;
-            }
-
-            .hero-bg {
-                opacity: .55;
+                padding: 16px;
             }
 
             h1 {
@@ -3251,6 +3331,12 @@
                 line-height: 1.06;
 
                 letter-spacing: -.5px;
+            }
+
+            .hero-content>p {
+                font-size: 10px;
+
+                line-height: 1.5;
             }
 
             .eyebrow {
@@ -3269,6 +3355,15 @@
                 padding: 7px 10px;
 
                 font-size: 9px;
+            }
+
+            .hero-points {
+                gap: 5px 8px;
+                margin-top: 8px;
+            }
+
+            .hero-points span {
+                font-size: 7px;
             }
 
             /* Buttons */
@@ -3613,8 +3708,21 @@
                 font-size: 10px;
             }
 
+
+            .hero {
+                min-height: 225px;
+            }
+
+            .hero-content {
+                padding: 13px;
+            }
+
             h1 {
                 font-size: 23px;
+            }
+
+            .hero-content>p {
+                font-size: 9px;
             }
 
             .hero-actions button {
@@ -3623,6 +3731,14 @@
                 padding: 6px 8px;
 
                 font-size: 8px;
+            }
+
+            .hero-points {
+                gap: 4px 6px;
+            }
+
+            .hero-points span {
+                font-size: 6.5px;
             }
 
             .panel {
@@ -3852,8 +3968,21 @@
                 font-size: 10px;
             }
 
+
+            .hero {
+                min-height: 265px;
+            }
+
+            .hero-content {
+                padding: 24px 28px;
+            }
+
             h1 {
                 font-size: 38px;
+            }
+
+            .hero-content>p {
+                font-size: 13px;
             }
 
             .stats {
@@ -3979,7 +4108,7 @@
 
 
         /* ============================================================
-   END OF MEGAH STAKING CSS
+   END OF RECEH STAKING CSS
    ============================================================ */
 
         /* ============================================================ 
@@ -4013,10 +4142,12 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
             <!-- Logo + Wallet -->
             <div class="header-top">
                 <div class="brand" onclick="showTab('dashboard')">
-                    <img class="brand-logo" src="https://recehstaking.github.io/images/RECEH.png" alt="Receh Token">
+                    <img class="brand-logo"
+                        src="https://raw.githubusercontent.com/cryptorecehcom/images/refs/heads/main/logo-receh-bsc-256x256.png"
+                        alt="RECEH Token">
                     <div>
-                        <div class="brand-title">Receh Staking</div>
-                        <div class="brand-sub">Stake $RECEH Earn $RECEH</div>
+                        <div class="brand-title">RECEH Staking</div>
+                        <div class="brand-sub">Web3 staking platform for $RECEH</div>
                     </div>
                 </div>
                 <div class="header-wallet">
@@ -4038,7 +4169,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     <i class="fa-solid fa-network-wired"></i> Referral
                 </button>
                 <button class="tab" data-tab="calculator">
-                    <i class="fa-solid fa-calculator"></i> Estimator
+                    <i class="fa-solid fa-calculator"></i> Calculator
                 </button>
                 <button id="ownerTabNav" class="tab owner-tab" data-tab="owner">
                     <i class="fa-solid fa-crown"></i> Owner
@@ -4053,19 +4184,35 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
     <main class="wrap">
 
         <!-- HERO -->
-        <section class="hero">
-            <div class="hero-bg"
-                style="background-image:url('https://recehstaking.github.io/images/receh-staking-banner.webp')">
-            </div>
+        <section class="hero" aria-labelledby="heroTitle">
             <div class="hero-content">
-                <span class="eyebrow"><i></i>BNB Smart Chain • $RECEH</span>
-                <h1>Stake RECEH.</h1>
-                <p>Start staking $RECEH through the smart contract on BNB Smart Chain. Monitor your
-                    on-chain staking position and claim ROI as well as qualifying referral bonuses directly from your
-                    Web3 wallet.</p>
+                <span class="eyebrow">
+                    <i></i>BNB Smart Chain • $RECEH • On-Chain
+                </span>
+
+                <h1 id="heroTitle">Stake $RECEH.</h1>
+
+                <p>
+                    Stake $RECEH through the smart contract on BNB Smart Chain.
+                    Track your staking position, ROI, referral rewards, and on-chain activity
+                    directly from your Web3 wallet.
+                </p>
+
                 <div class="hero-actions">
-                    <button class="primary" data-tab="stake">Start Staking</button>
-                    <button data-tab="guide">How It Works</button>
+                    <button class="primary" data-tab="stake" type="button">
+                        <i class="fa-solid fa-lock"></i> Start Staking
+                    </button>
+
+                    <button class="hero-guide-btn" data-tab="guide" type="button">
+                        <i class="fa-solid fa-circle-info"></i> How It Works
+                    </button>
+                </div>
+
+                <div class="hero-points" aria-label="Platform features">
+                    <span><i class="fa-solid fa-link"></i> On-chain</span>
+                    <span><i class="fa-solid fa-wallet"></i> Web3 Wallet</span>
+                    <span><i class="fa-solid fa-gas-pump"></i> BNB Gas</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Non-custodial</span>
                 </div>
             </div>
         </section>
@@ -4150,7 +4297,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
             <div class="panel" style="margin-top:14px;">
                 <div class="panel-title-row">
                     <h2 style="font-size:14px;">
-                        <i class="fa-solid fa-chart-simple"></i> Total Staked Global (TVL)
+                        <i class="fa-solid fa-chart-simple"></i> Total Staked (TVL) — ROI Staking
                     </h2>
                     <span class="badge green" style="font-size:8px;padding:2px 8px;">
                         <i class="fa-solid fa-circle" style="font-size:6px;"></i> Live
@@ -4224,21 +4371,21 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                 </div>
                 <div class="contract-grid">
                     <div class="contract-item">
-                        <label><i class="fa-solid fa-coins"></i> Reward Pool</label>
+                        <label><i class="fa-solid fa-coins"></i> Reward Pool Balance</label>
                         <strong id="contractPoolBalance" style="color:var(--green);">—</strong>
                         <span class="small muted" style="display:block;font-size:7px;margin-top:1px;">Tokens available
                             for rewards</span>
                     </div>
-                    <div class="contract-item"><label><i class="fa-brands fa-ethereum"></i> Network</label><strong
-                            id="contractNetwork">BNB Smart
+                    <div class="contract-item"><label>Network</label><strong id="contractNetwork"><i
+                                class="fa-brands fa-ethereum"></i> BNB Smart
                             Chain</strong></div>
                     <div class="contract-item"><label><i class="fa-solid fa-coins"></i> Staking Token</label><strong
                             id="contractToken">—</strong></div>
-                    <div class="contract-item"><label><i class="fa-solid fa-arrow-up-1-9"></i> Minimum
+                    <div class="contract-item"><label><i class="fa-solid fa-cash-register"></i> Minimum
                             Stake</label><strong id="contractMin">—</strong></div>
                     <div class="contract-item"><label><i class="fa-solid fa-money-bill-trend-up"></i> Daily
                             ROI</label><strong id="contractRoi">—</strong></div>
-                    <div class="contract-item"><label><i class="fa-solid fa-gifts"></i> Leader Bonus</label><strong
+                    <div class="contract-item"><label><i class="fa-solid fa-user-tie"></i> Leader Bonus</label><strong
                             id="contractLeader">—</strong></div>
                     <div class="contract-item">
                         <label><i class="fa-solid fa-wallet"></i> Admin Leftover</label>
@@ -4350,7 +4497,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
         <section id="calculator" class="section">
             <div class="panel">
                 <div class="panel-title-row">
-                    <h2><i class="fa-solid fa-calculator"></i> Staking Estimator</h2>
+                    <h2><i class="fa-solid fa-calculator"></i> Staking Calculator</h2>
                     <span class="badge green">Estimate</span>
                 </div>
                 <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
@@ -4524,7 +4671,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     <i class="fa-solid fa-star"></i>&nbsp;
                     <strong>RECEH</strong> is the official utility token of the Crypto RECEH ecosystem. Engineered to
                     <strong>power next-generation crypto services, reward innovation</strong> and fuel the decentralized
-                    future..
+                    future.
                     <br><br>
                     <strong>Key Staking Features:</strong>
                     <ul style="margin:4px 0 0 16px;font-size:11px;color:var(--text2);">
@@ -4542,44 +4689,55 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                         <div class="pie-chart">
                             <div class="pie-center">
                                 <span class="pct">100%</span>
-                                <span class="label">Supply</span>
+                                <span class="label">Total Supply</span>
                             </div>
                         </div>
                     </div>
+
                     <div class="pie-legend">
                         <div class="legend-item">
+                            <span class="color-dot" style="background:#a855f7;"></span>
+                            <span class="legend-text">
+                                <strong>Development Team &amp; Future Reserve</strong> — Core development, operations,
+                                maintenance, and reserves for future ecosystem growth.
+                            </span>
+                            <span class="legend-pct" style="color:#a855f7;">40%</span>
+                        </div>
+
+                        <div class="legend-item">
                             <span class="color-dot" style="background:#00ff88;"></span>
-                            <span class="legend-text"><strong>Staking Rewards</strong> — Rewards for the staking
-                                program</span>
+                            <span class="legend-text">
+                                <strong>Multichain Staking Rewards</strong> — Rewards supporting APY and ROI staking
+                                programs across multiple blockchain networks.
+                            </span>
                             <span class="legend-pct" style="color:#00ff88;">10%</span>
                         </div>
 
                         <div class="legend-item">
-                            <span class="color-dot" style="background:#a855f7;"></span>
-                            <span class="legend-text"><strong>Development &amp; Treasury</strong> — Development,
-                                maintenance &amp; long-term ecosystem growth</span>
-                            <span class="legend-pct" style="color:#a855f7;">50%</span>
-                        </div>
-
-                        <div class="legend-item">
-                            <span class="color-dot" style="background:#60a5fa;"></span>
-                            <span class="legend-text"><strong>Investors &amp; Partnerships</strong> — Strategic
-                                partnerships &amp; ecosystem growth</span>
-                            <span class="legend-pct" style="color:#60a5fa;">15%</span>
+                            <span class="color-dot" style="background:#fbbf24;"></span>
+                            <span class="legend-text">
+                                <strong>Public Sale &amp; DEX Liquidity</strong> — 5% for public distribution and 10%
+                                for DEX liquidity to support market access and trading.
+                            </span>
+                            <span class="legend-pct" style="color:#fbbf24;">15%</span>
                         </div>
 
                         <div class="legend-item">
                             <span class="color-dot" style="background:#f97316;"></span>
-                            <span class="legend-text"><strong>Ecosystem &amp; Campaigns</strong> — Services, community
-                                rewards &amp; promotional campaigns</span>
-                            <span class="legend-pct" style="color:#f97316;">20%</span>
+                            <span class="legend-text">
+                                <strong>Community &amp; User Rewards</strong> — Giveaways, cashback for eligible users
+                                of our services, and community reward initiatives.
+                            </span>
+                            <span class="legend-pct" style="color:#f97316;">15%</span>
                         </div>
 
                         <div class="legend-item">
-                            <span class="color-dot" style="background:#fbbf24;"></span>
-                            <span class="legend-text"><strong>Public Sale &amp; Liquidity</strong> — Public distribution
-                                &amp; DEX liquidity</span>
-                            <span class="legend-pct" style="color:#fbbf24;">5%</span>
+                            <span class="color-dot" style="background:#60a5fa;"></span>
+                            <span class="legend-text">
+                                <strong>Strategic Partnerships</strong> — Supporting partners and collaborators
+                                contributing to joint development, adoption, and long-term ecosystem expansion.
+                            </span>
+                            <span class="legend-pct" style="color:#60a5fa;">20%</span>
                         </div>
                     </div>
                 </div>
@@ -4588,11 +4746,11 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     <h4 style="font-size:11px;color:var(--text);margin-bottom:6px;"><i class="fa-solid fa-link"></i>
                         Official Links</h4>
                     <div class="social-links">
-                        <a href="https://recehstaking.github.io/" target="_blank"><i class="fa-solid fa-globe"></i>
+                        <a href="https://cryptoreceh.com/token/" target="_blank"><i class="fa-solid fa-globe"></i>
                             Website</a>
                         <a href="https://x.com/cryptoreceh_" target="_blank"><i class="fa-brands fa-twitter"></i>
                             Twitter</a>
-                        <a href="https://t.me/cryptorecehcom" target="_blank"><i class="fa-brands fa-telegram"></i>
+                        <a href="https://t.me/receh_community" target="_blank"><i class="fa-brands fa-telegram"></i>
                             Telegram</a>
                         <a href="https://pancakeswap.finance/swap?outputCurrency=0x4c9C431Fa7fD104c0E7230d20E1623E62019A1C5"
                             target="_blank"><i class="fa-solid fa-chart-line"></i> Trade</a>
@@ -4612,17 +4770,14 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                 </div>
 
                 <div class="notice info" style="margin-bottom:8px;font-size:10px;">
-                    <i class="fa-solid fa-circle-info"></i>&nbsp;Follow these steps to start earning rewards with Receh
+                    <i class="fa-solid fa-circle-info"></i>&nbsp; Follow these steps to start earning rewards with Receh
                     Staking.
                 </div>
 
                 <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
-                    <span class="badge green" style="font-size:8px;"><i class="fa-solid fa-check"></i>&nbsp;5
-                        Steps</span>
-                    <span class="badge cyan" style="font-size:8px;"><i class="fa-solid fa-clock"></i>&nbsp;~5-10
-                        min</span>
-                    <span class="badge gold" style="font-size:8px;"><i class="fa-solid fa-coins"></i>&nbsp;BNB for
-                        gas</span>
+                    <span class="badge green" style="font-size:8px;"><i class="fa-solid fa-check"></i> 5 Steps</span>
+                    <span class="badge cyan" style="font-size:8px;"><i class="fa-solid fa-clock"></i> ~5-10 min</span>
+                    <span class="badge gold" style="font-size:8px;"><i class="fa-solid fa-coins"></i> BNB for gas</span>
                 </div>
 
                 <!-- BENEFITS -->
@@ -4712,10 +4867,9 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                         <div class="step-content">
                             <h4>Open in Web3 Wallet</h4>
                             <p>Open your mobile wallet app (TokenPocket, MetaMask, Trust Wallet) and navigate to
-                                <strong>recehstaking.github.io/staking</strong>.
+                                <strong>recehstaking.github.io</strong>.
                             </p>
-                            <span class="step-badge"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Wallet
-                                Web3</span>
+                            <span class="step-badge"><i class="fa-solid fa-mobile-screen-button"></i> Mobile</span>
                         </div>
                     </div>
 
@@ -4726,9 +4880,9 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                             <p>Buy <strong>$RECEH</strong> on <strong>PancakeSwap</strong> or transfer from another
                                 wallet.</p>
                             <button class="step-action outline"
-                                onclick="window.open('https://tokoreceh.github.io/','_blank')"
+                                onclick="window.open('https://cryptoreceh.com/buy/','_blank')"
                                 style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Buy RECEH
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buy RECEH
                             </button>
                         </div>
                     </div>
@@ -4741,7 +4895,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                                     Chain</strong>.</p>
                             <button class="step-action" onclick="document.getElementById('connectBtn').click()"
                                 style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-plug"></i>&nbsp;Connect Now
+                                <i class="fa-solid fa-plug"></i> Connect Now
                             </button>
                         </div>
                     </div>
@@ -4754,7 +4908,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                                 then <strong>"Stake RECEH"</strong>.</p>
                             <button class="step-action" onclick="showTab('stake')"
                                 style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-arrow-right"></i>&nbsp;Stake
+                                <i class="fa-solid fa-arrow-right"></i> Stake
                             </button>
                         </div>
                     </div>
@@ -4768,7 +4922,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                             </p>
                             <button class="step-action" onclick="showTab('dashboard')"
                                 style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-arrow-right"></i>&nbsp;Dashboard
+                                <i class="fa-solid fa-arrow-right"></i> Dashboard
                             </button>
                         </div>
                     </div>
@@ -4789,7 +4943,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
 
                 <!-- FAQ -->
                 <details class="faq" style="margin-top:10px;">
-                    <summary>📌 What is Receh Staking?</summary>
+                    <summary>📌 What is RECEH Staking?</summary>
                     <div>
                         <p><strong>Receh Staking</strong> is a decentralized staking program for <strong>$RECEH</strong>
                             tokens on <strong>BNB Smart Chain</strong>.</p>
@@ -4850,6 +5004,10 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
         SECTION: DISCLAIMER
         ============================================================ -->
         <section id="disclaimer" class="section">
+            <div class="notice danger"><i class="fa-solid fa-triangle-exclamation"></i> Staking involves smart-contract,
+                market, liquidity, network, and transaction risks. Never share your seed phrase or private key. Verify
+                the contract and transaction details in your wallet before signing.</div>
+
             <div class="panel">
                 <div class="panel-title-row">
                     <h2><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</h2>
@@ -4910,14 +5068,14 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     </div>
 
                     <h2>1. Acceptance of Terms</h2>
-                    <p>By using the Receh Staking platform, you agree to these Terms &amp; Conditions.</p>
+                    <p>By using the RECEH Staking platform, you agree to these Terms &amp; Conditions.</p>
 
                     <h2>2. Eligibility</h2>
                     <p>You must be at least 18 years old and have the legal capacity to enter into these terms.</p>
 
                     <h2>3. Platform Use</h2>
                     <ul>
-                        <li>The Platform provides a user interface for interacting with the Receh Staking smart
+                        <li>The Platform provides a user interface for interacting with the RECEH Staking smart
                             contract.
                         </li>
                         <li>All transactions are executed on-chain via your Web3 wallet.</li>
@@ -5070,8 +5228,11 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-links">
+                <a href="https://cryptoreceh.com/buy/" target="_blank" rel="nofollow">
+                    <i class="fa-solid fa-cart-plus"></i> Buy RECEH
+                </a>
                 <a href="javascript:void(0)" onclick="showTab('about')">
-                    <i class="fa-solid fa-info-circle"></i> About
+                    <i class="fa-brands fa-readme"></i> About
                 </a>
                 <a href="javascript:void(0)" onclick="showTab('guide')">
                     <i class="fa-brands fa-readme"></i> Guide
@@ -5083,7 +5244,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     <i class="fa-solid fa-scale-balanced"></i> Terms
                 </a>
             </div>
-            <div class="footer-note">© 2026 recehstaking.github.io • Web3 Solutions</div>
+            <div class="footer-note">© 2026 Crypto Receh • BNB Smart Chain</div>
         </footer>
 
     </main>
@@ -6544,7 +6705,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     section.classList.toggle('active', section.id === name);
                 });
 
-                document.querySelectorAll('#navBar .tab').forEach(button => {
+                document.querySelectorAll('#navBar .tab, #statsNav .tab').forEach(button => {
                     button.classList.toggle('active', button.dataset.tab === name);
                 });
 
@@ -6564,16 +6725,6 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
             }
 
             window.showTab = showTab;
-
-            // ============================================================
-            // HERO
-            // ============================================================
-            function setupHero() {
-                const heroConnect = $('heroConnect');
-                if (heroConnect) {
-                    heroConnect.addEventListener('click', connect);
-                }
-            }
 
             // ============================================================
             // POLLING
@@ -6854,18 +7005,11 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
             async function init() {
                 try {
                     buildLevelInputs();
-                    setupHero();
                     setupWalletEvents();
                     setupDisclaimerPopup();
 
                     document.querySelectorAll('#navBar .tab').forEach(button => {
-                        button.addEventListener('click', () => {
-                            const tabName = button.dataset.tab;
-
-                            if (!tabName) return;
-
-                            showTab(tabName);
-                        });
+                        button.addEventListener('click', () => showTab(button.dataset.tab));
                     });
 
                     document.querySelectorAll('.hero-actions button[data-tab]').forEach(btn => {
@@ -7051,13 +7195,13 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
 
     <script>
         // ============================================================
-        // TVL CHART - MENAMPILKAN USD DI CHART (FIXED)
+        // TVL CHART - API
         // ============================================================
 
         (async () => {
             'use strict';
 
-            var API_BASE = 'https://cryptoreceh.com/staking/roi/api/';
+            var API_BASE = 'https://recehstaking.github.io/staking/roi/api/';
             var API_HISTORY = API_BASE + 'tvl_api.php?_=' + Date.now();
             var API_LATEST = API_BASE + 'tvl_latest.php?_=' + Date.now();
             var API_SAVE = API_BASE + 'save_tvl.php?force=1&_=' + Date.now();
@@ -7346,12 +7490,22 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                 }
 
                 if (minMaxEl && data?.summary) {
-                    if (effectivePrice && effectivePrice > 0 && data.summary.min_tvl !== undefined) {
-                        var min = data.summary.min_tvl * effectivePrice;
-                        var max = data.summary.max_tvl * effectivePrice;
-                        minMaxEl.textContent = '$' + min.toFixed(0) + ' / $' + max.toFixed(0);
-                    } else if (data.summary.min_tvl !== undefined) {
-                        minMaxEl.textContent = data.summary.min_tvl.toFixed(2) + ' / ' + data.summary.max_tvl.toFixed(2) + ' RECEH';
+                    var summary = data.summary;
+
+                    if (summary.min_tvl_usd !== undefined && summary.max_tvl_usd !== undefined &&
+                        summary.min_tvl_usd !== null && summary.max_tvl_usd !== null &&
+                        summary.min_tvl_usd > 0 && summary.max_tvl_usd > 0) {
+
+                        var min = summary.min_tvl_usd;
+                        var max = summary.max_tvl_usd;
+
+                        if (min < max) {
+                            minMaxEl.textContent = '$' + min.toFixed(2) + ' / $' + max.toFixed(2);
+                        } else if (min === max) {
+                            minMaxEl.textContent = '$' + min.toFixed(2) + ' (data terkumpul)';
+                        } else {
+                            minMaxEl.textContent = '—';
+                        }
                     } else {
                         minMaxEl.textContent = '—';
                     }
@@ -7458,7 +7612,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
                     }
 
                 } catch (e) {
-                    // Silent fail
+
                 }
                 isUpdating = false;
             }
@@ -7843,7 +7997,7 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
     <script>
         (function () {
             'use strict';
-            // Only activate on mobile screens
+
             if (window.innerWidth <= 768) {
                 let lastTouchEnd = 0;
 
