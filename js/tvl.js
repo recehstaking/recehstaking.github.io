@@ -8,8 +8,7 @@
   var API_PRICE = API_BASE + "get_receh_price.php?_=" + Date.now();
 
   var chart = null;
-  var candlestickSeries = null;
-  var volumeSeries = null;
+  var lineSeries = null;
   var chartData = [];
   var isChartReady = false;
   var updateInterval = null;
@@ -70,40 +69,15 @@
     return filled;
   }
 
-  function buildCandleDataUsd(data) {
-    return data.map(function (p, index, arr) {
+  function buildLineData(data) {
+    return data.map(function (p) {
       var value = p.valueUsd;
-
       if (!value || value === 0) {
         value = p.value * (currentPrice || 0);
       }
-
-      if (index === 0 || value === 0) {
-        return {
-          time: p.time,
-          open: value,
-          high: value,
-          low: value,
-          close: value,
-        };
-      }
-
-      var prevValue = arr[index - 1].valueUsd;
-      if (!prevValue || prevValue === 0) {
-        prevValue = arr[index - 1].value * (currentPrice || 0);
-      }
-
-      var open = prevValue;
-      var close = value;
-      var high = Math.max(open, close);
-      var low = Math.min(open, close);
-
       return {
         time: p.time,
-        open: open,
-        high: high,
-        low: low,
-        close: close,
+        value: value,
       };
     });
   }
@@ -358,9 +332,28 @@
             typeof chart.timeScale === "function" &&
             !isModalOpen()
           ) {
-            chart.timeScale().fitContent();
+            fitAllTimeWithPadding();
           }
         }, 100);
+      }
+    } catch (e) {}
+  }
+
+  function fitAllTimeWithPadding() {
+    if (!chart || !isChartReady) return;
+    if (isModalOpen()) return;
+
+    try {
+      chart.timeScale().fitContent();
+
+      var logicalRange = chart.timeScale().getVisibleLogicalRange();
+      if (logicalRange) {
+        var range = logicalRange.to - logicalRange.from;
+        var padding = range * 0.1;
+        chart.timeScale().setVisibleLogicalRange({
+          from: logicalRange.from - padding,
+          to: logicalRange.to + padding,
+        });
       }
     } catch (e) {}
   }
@@ -406,28 +399,10 @@
           });
         }
 
-        var candleData = buildCandleDataUsd(chartData);
-        candlestickSeries.setData(candleData);
-
-        candlestickSeries.applyOptions({
-          priceFormat: {
-            type: "price",
-            precision: isMobile() ? 0 : 2,
-            minMove: isMobile() ? 1 : 0.01,
-          },
-        });
-
-        var volumeData = chartData.map(function (p) {
-          return {
-            time: p.time,
-            value: 1,
-            color: "rgba(34,197,94,0.15)",
-          };
-        });
-        volumeSeries.setData(volumeData);
+        var lineData = buildLineData(chartData);
+        lineSeries.setData(lineData);
 
         if (chart && !isModalOpen()) {
-          chart.timeScale().fitContent();
         }
       }
     } catch (e) {}
@@ -561,68 +536,63 @@
         borderColor: "rgba(34,197,94,0.1)",
         timeVisible: true,
         secondsVisible: false,
-        fixLeftEdge: true,
-        fixRightEdge: true,
+        fixLeftEdge: false,
+        fixRightEdge: false,
         tickMarkFormatter: function (time) {
           var date = new Date(time * 1000);
+          var now = new Date();
+          var diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+
           if (isMobile()) {
             return (
               date.getHours() + ":" + String(date.getMinutes()).padStart(2, "0")
             );
           }
-          return date.toLocaleString("id-ID", {
-            day: "2-digit",
-            month: "short",
-            hour: "2-digit",
-            minute: "2-digit",
-          });
+
+          if (diffDays > 7) {
+            return date.toLocaleString("id-ID", {
+              day: "2-digit",
+              month: "short",
+            });
+          } else if (diffDays > 1) {
+            return date.toLocaleString("id-ID", {
+              day: "2-digit",
+              month: "short",
+              hour: "2-digit",
+              minute: "2-digit",
+            });
+          } else {
+            return (
+              date.getHours() + ":" + String(date.getMinutes()).padStart(2, "0")
+            );
+          }
         },
       },
       handleScroll: !isMobile(),
       handleScale: !isMobile(),
     });
 
-    candlestickSeries = chart.addCandlestickSeries({
-      upColor: "#22c55e",
-      downColor: "#ff536b",
-      borderVisible: false,
-      wickUpColor: "#22c55e",
-      wickDownColor: "#ff536b",
+    lineSeries = chart.addAreaSeries({
+      topColor: "rgba(34,197,94,0.4)",
+      bottomColor: "rgba(34,197,94,0.02)",
+      lineColor: "#22c55e",
+      lineWidth: 2,
       priceScaleId: "right",
       priceFormat: {
         type: "price",
         precision: isMobile() ? 0 : 2,
         minMove: isMobile() ? 1 : 0.01,
       },
+      crosshairMarkerVisible: true,
+      crosshairMarkerRadius: 4,
     });
 
-    volumeSeries = chart.addHistogramSeries({
-      color: "rgba(34,197,94,0.2)",
-      priceFormat: {
-        type: "volume",
-      },
-      priceScaleId: "",
-      scaleMargins: {
-        top: isMobile() ? 0.9 : 0.85,
-        bottom: 0,
-      },
-    });
-
-    var candleData = buildCandleDataUsd(chartData);
-    candlestickSeries.setData(candleData);
-
-    var volumeData = chartData.map(function (p) {
-      return {
-        time: p.time,
-        value: 1,
-        color: "rgba(34,197,94,0.15)",
-      };
-    });
-    volumeSeries.setData(volumeData);
+    var lineData = buildLineData(chartData);
+    lineSeries.setData(lineData);
 
     setTimeout(function () {
       if (chart && !isModalOpen()) {
-        chart.timeScale().fitContent();
+        fitAllTimeWithPadding();
       }
     }, 200);
 
@@ -672,8 +642,7 @@
       } catch (e) {}
       chart = null;
     }
-    candlestickSeries = null;
-    volumeSeries = null;
+    lineSeries = null;
     isChartReady = false;
     isChartInitialized = false;
     chartData = [];
