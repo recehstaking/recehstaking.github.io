@@ -650,7 +650,7 @@ main {
     min-height: 250px;
 
     background-color: #0d141c;
-    background-image: url("https://recehstaking.github.io/images/receh-staking-banner.webp");
+    background-image: url("https://cryptoreceh.com/images/receh-staking-banner.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -899,6 +899,31 @@ button.danger:hover:not(:disabled),
     background: var(--blue) !important;
     border-color: rgba(121, 195, 250, .65) !important;
     color: #06111a !important;
+}
+
+/* ============================================================
+   STAKING BUTTON TOGGLE
+   ============================================================ */
+
+#approveBtn.hidden,
+#stakeBtn.hidden {
+    display: none !important;
+}
+
+#stakeBtn:not(.hidden) {
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
