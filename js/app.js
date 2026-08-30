@@ -391,6 +391,7 @@
       "Owner panel is restricted to the contract owner.";
     setStakeStatus("", "info", false);
     setGasEstimate(null, false);
+    toggleStakeButtons(false);
   }
 
   function disconnectUI() {
@@ -424,6 +425,7 @@
     document.querySelectorAll(".owner-tab").forEach((el) => {
       if (el) el.style.display = "none";
     });
+    toggleStakeButtons(false);
   }
 
   async function syncWalletState(notifyWrongNetwork = false) {
@@ -543,6 +545,7 @@
       $("approveBtn").disabled = false;
       $("stakeBtn").disabled = false;
       $("maxBtn").disabled = false;
+      toggleStakeButtons(false);
       await refresh();
       startPolling();
       return true;
@@ -1143,35 +1146,54 @@
       );
       return;
     }
+
     const amountInput = $("stakeAmount");
     const amountRaw = amountInput.value.trim();
     const validation = validateAmountInput(amountRaw);
+
     if (!validation.valid) {
       notify(validation.message, "warn", "Input Error", 0);
       amountInput.classList.add("input-error");
       setTimeout(() => amountInput.classList.remove("input-error"), 3000);
       return;
     }
+
     try {
       const amount = ethers.parseUnits(validation.value, tokenDecimals);
+
       if (!(await validateStakeInput(amount))) {
         return;
       }
+
       const currentAllowance = await token.allowance(
         account,
         CONFIG.stakingContract,
       );
+
       if (amount <= currentAllowance) {
+        toggleStakeButtons(true);
         notify(
-          `✅ Allowance is already sufficient (${fmt(currentAllowance)} RECEH).`,
-          "info",
-          "Allowance Sufficient",
+          `✅ Allowance is sufficient. You can now stake ${fmt(amount)} RECEH.`,
+          "ok",
+          "Ready to Stake",
           3000,
         );
         return;
       }
+
       const tx = await token.approve(CONFIG.stakingContract, amount);
       await sendTransaction(tx, "Approve RECEH", "approveBtn");
+
+      toggleStakeButtons(true);
+
+      notify(
+        "✅ Approval successful!\n\n" +
+          `You have approved ${fmt(amount)} RECEH for staking.\n` +
+          'Click "Stake RECEH" to complete.',
+        "ok",
+        "🎉 Ready to Stake!",
+        6000,
+      );
     } catch (e) {
       notify(cleanError(e), "error", "Approval Failed", 0);
     }
@@ -1188,31 +1210,40 @@
       );
       return;
     }
+
     const amountInput = $("stakeAmount");
     const amountRaw = amountInput.value.trim();
     const validation = validateAmountInput(amountRaw);
+
     if (!validation.valid) {
       notify(validation.message, "warn", "Input Error", 0);
       amountInput.classList.add("input-error");
       setTimeout(() => amountInput.classList.remove("input-error"), 3000);
       return;
     }
+
     try {
       const amount = ethers.parseUnits(validation.value, tokenDecimals);
+
       if (!(await validateStakeInput(amount))) {
         return;
       }
+
       const allowance = await token.allowance(account, CONFIG.stakingContract);
+
       if (allowance < amount) {
+        toggleStakeButtons(false);
         notify(
-          `Insufficient allowance.\nAllowance: ${fmt(allowance)} RECEH\nRequired: ${fmt(amount)} RECEH\n\nPlease click "Approve RECEH" first.`,
+          `Insufficient allowance.\nAllowance: ${fmt(allowance)} RECEH\nRequired: ${fmt(amount)} RECEH\n\nPlease approve first.`,
           "warn",
           "Insufficient Allowance",
           0,
         );
         return;
       }
+
       let up = $("referrer").value.trim();
+
       if (up) {
         if (!validAddress(up)) {
           notify("Invalid referrer address.", "error", "Input Error", 0);
@@ -1228,13 +1259,91 @@
           return;
         }
       }
+
       const tx = await gt.stake(amount, up || ethers.ZeroAddress);
       await sendTransaction(tx, "Stake RECEH", "stakeBtn");
+
       amountInput.value = "";
+      toggleStakeButtons(false);
       clearCache();
       await refresh();
+
+      notify(
+        "✅ Staking successful!\n\n" +
+          `${fmt(amount)} RECEH has been staked.\n` +
+          "Start earning daily ROI rewards now!",
+        "ok",
+        "🎉 Stake Complete!",
+        6000,
+      );
     } catch (e) {
       notify(cleanError(e), "error", "Stake Failed", 0);
+    }
+  }
+
+  // ============================================================
+  // TOGGLE STAKE BUTTONS
+  // ============================================================
+
+  function toggleStakeButtons(showStake) {
+    const approveBtn = $("approveBtn");
+    const stakeBtn = $("stakeBtn");
+    const amountInput = $("stakeAmount");
+    const validation = validateAmountInput(amountInput.value.trim());
+
+    if (!validation.valid || !amountInput.value.trim()) {
+      approveBtn.disabled = true;
+      stakeBtn.disabled = true;
+      approveBtn.classList.remove("hidden");
+      stakeBtn.classList.add("hidden");
+      return;
+    }
+
+    if (showStake) {
+      approveBtn.classList.add("hidden");
+      approveBtn.disabled = true;
+      stakeBtn.classList.remove("hidden");
+      stakeBtn.disabled = false;
+    } else {
+      approveBtn.classList.remove("hidden");
+      approveBtn.disabled = false;
+      stakeBtn.classList.add("hidden");
+      stakeBtn.disabled = true;
+    }
+  }
+
+  async function checkAllowance() {
+    if (!account || !token) {
+      toggleStakeButtons(false);
+      return;
+    }
+
+    const amountInput = $("stakeAmount");
+    const amountRaw = amountInput.value.trim();
+    const validation = validateAmountInput(amountRaw);
+
+    if (!validation.valid || !amountRaw) {
+      toggleStakeButtons(false);
+      return;
+    }
+
+    try {
+      const amount = ethers.parseUnits(amountRaw, tokenDecimals);
+      const allowance = await token.allowance(account, CONFIG.stakingContract);
+      const balance = await token.balanceOf(account);
+
+      if (amount > balance) {
+        toggleStakeButtons(false);
+        return;
+      }
+
+      if (allowance >= amount) {
+        toggleStakeButtons(true);
+      } else {
+        toggleStakeButtons(false);
+      }
+    } catch (e) {
+      toggleStakeButtons(false);
     }
   }
 
@@ -2099,14 +2208,12 @@
         this.classList.remove("input-error");
         const val = this.value.trim();
         const validation = validateAmountInput(val);
+
         if (validation.valid) {
-          $("approveBtn").disabled = false;
-          $("stakeBtn").disabled = false;
-          $("maxBtn").disabled = false;
           $("stakeAmountError").style.display = "none";
+          checkAllowance();
         } else {
-          $("approveBtn").disabled = true;
-          $("stakeBtn").disabled = true;
+          toggleStakeButtons(false);
           if (val) {
             $("stakeAmountError").textContent = validation.message;
             $("stakeAmountError").style.display = "block";
