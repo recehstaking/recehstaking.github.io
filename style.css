@@ -42,6 +42,7 @@
 
     /* ---------- Blue / Information ---------- */
     --blue: #4fa3e8;
+    --cyan: #4fa3e8;
     --blue-light: #79c3fa;
     --blue-dark: #2878b7;
 
@@ -2927,6 +2928,69 @@ input.input-error {
 
 
 /* ============================================================
+   NOTIFICATION BUTTON LAYOUT — PRODUCTION FIX
+   Keeps notification actions centered and prevents legacy
+   float/position rules from shifting the button left.
+   ============================================================ */
+
+.notify-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    min-height: 0;
+}
+
+.notify-buttons button {
+    position: static;
+    float: none;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 72px;
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    margin: 0;
+    padding: 0 18px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.notify-buttons button[hidden],
+.notify-buttons button[style*="display: none"] {
+    display: none !important;
+}
+
+.notify-action:not([hidden]),
+.notify-close:not([hidden]) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notify-message {
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
+@media (max-width: 520px) {
+    .notify-box {
+        width: min(92vw, 430px);
+        max-width: 92vw;
+    }
+}
+
+
+/* ============================================================
    37. DISCLAIMER POPUP
    ============================================================ */
 
@@ -4096,5 +4160,182 @@ PREVENT PINCH ZOOM ON MOBILE - ADDED
     section,
     .panel {
         touch-action: pan-y;
+    }
+}
+
+/* ============================================================
+           EXTENDED ON-CHAIN NETWORK DATA
+           ============================================================ */
+.extended-network {
+    margin-top: 12px;
+}
+
+.network-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.network-stat {
+    background: rgba(15, 18, 32, .42);
+    border: 1px solid rgba(79, 163, 232, .10);
+    border-radius: 8px;
+    padding: 8px;
+    min-width: 0;
+}
+
+.network-stat .label {
+    display: block;
+    font-size: 8px;
+    color: var(--muted);
+    margin-bottom: 3px;
+}
+
+.network-stat strong {
+    display: block;
+    font-size: 11px;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.network-table-wrap {
+    overflow: auto;
+    margin-top: 8px;
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+}
+
+.network-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 920px;
+    font-size: 9px;
+}
+
+.network-table th,
+.network-table td {
+    padding: 7px 8px;
+    border-bottom: 1px solid var(--line-soft);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.network-table th {
+    color: var(--muted);
+    font-weight: 700;
+    background: rgba(255, 255, 255, .02);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.network-table td {
+    color: var(--text2);
+}
+
+.network-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.level-earnings {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.level-earn {
+    background: rgba(36, 201, 135, .04);
+    border: 1px solid rgba(36, 201, 135, .08);
+    border-radius: 6px;
+    padding: 6px;
+    text-align: center;
+}
+
+.level-earn b {
+    display: block;
+    font-size: 8px;
+    color: var(--muted);
+}
+
+.level-earn span {
+    display: block;
+    font-size: 9px;
+    color: var(--green-light);
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.network-controls {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.network-controls .page-info {
+    font-size: 9px;
+    color: var(--muted);
+}
+
+.network-empty {
+    padding: 14px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+@media(max-width:700px) {
+    .network-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .level-earnings {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+/* ============================================================
+   SMALL-SCREEN READABILITY FLOOR
+   ============================================================ */
+
+@media (max-width: 360px) {
+    .guide-benefit h5 {
+        font-size: 8px;
+    }
+
+    .guide-benefit p {
+        font-size: 8px;
+    }
+
+    .guide-benefit .benefit-value {
+        font-size: 7px;
+    }
+
+    .calc-referral-dash .levels .lvl {
+        font-size: 8px;
+    }
+
+    .calc-result-item .label {
+        font-size: 8px !important;
+    }
+
+    .calc-result-item .value {
+        font-size: 9px !important;
+    }
+
+    .calc-result-item.highlight .value {
+        font-size: 11px !important;
+    }
+
+    .calc-result-item .sub {
+        font-size: 8px;
     }
 }
