@@ -1,106 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="id">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="https://recehstaking.github.io/images/favicon.png">
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1.0,user-scalable=no">
-    <meta name="theme-color" content="#070910">
-    <title>RECEH Staking - Stake & Dapatkan ROI Harian di BNB Chain | Bonus Referral 10 Level</title>
-
-    <meta name="description"
-        content="Stake RECEH di BNB Smart Chain dan dapatkan ROI harian hingga 0.32% + bonus referral 10 level. Platform staking terdesentralisasi dengan sistem leader bonus.">
-
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-
-    <meta name="author" content="Receh Staking">
-
-    <link rel="canonical" href="https://recehstaking.github.io/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="RECEH Staking - Stake RECEH & Dapatkan ROI Harian">
-    <meta property="og:description"
-        content="Stake RECEH di BNB Chain, dapatkan ROI 0.32% harian + bonus referral 10 level. Platform staking terdesentralisasi.">
-    <meta property="og:url" content="https://recehstaking.github.io/">
-    <meta property="og:site_name" content="Receh Staking">
-    <meta property="og:locale" content="id_ID">
-    <meta property="og:image" content="https://recehstaking.github.io/images/receh-staking-banner.webp">
-    <meta property="og:image:alt" content="RECEH Staking Platform - ROI & Referral Rewards">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RECEH Staking - ROI Harian & Bonus Referral 10 Level">
-    <meta name="twitter:description"
-        content="Stake RECEH di BNB Smart Chain, dapatkan ROI harian 0.32% + bonus referral 10 level.">
-    <meta name="twitter:image" content="https://recehstaking.github.io/images/receh-staking-banner.webp">
-    <meta name="twitter:image:alt" content="RECEH Staking on BNB Smart Chain">
-    <meta name="twitter:site" content="@cryptoreceh_">
-
+    <meta charset="utf-8" />
+    <link href="https://recehstaking.github.io/images/favicon.png" rel="shortcut icon" type="image/png" />
+    <meta content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1.0,user-scalable=no"
+        name="viewport" />
+    <meta content="#070910" name="theme-color" />
+    <title>Staking RECEH: ROI Harian &amp; Referral 10 Level</title>
+    <meta
+        content="Staking RECEH di BNB Smart Chain dengan ROI harian dan referral 10 level. Stake $RECEH, pantau reward, cek downline, dan lihat penghasilan referral secara on-chain."
+        name="description" />
+    <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots" />
+    <meta content="CryptoRECEH" name="author" />
+    <link href="https://recehstaking.github.io/" rel="canonical" />
+    <meta content="website" property="og:type" />
+    <meta content="Staking RECEH: ROI Harian &amp; Referral 10 Level" property="og:title" />
+    <meta
+        content="Staking RECEH di BNB Smart Chain dengan ROI harian dan referral 10 level. Stake $RECEH, pantau reward, cek downline, dan lihat penghasilan referral secara on-chain."
+        property="og:description" />
+    <meta content="https://recehstaking.github.io/" property="og:url" />
+    <meta content="CryptoRECEH" property="og:site_name" />
+    <meta content="id_ID" property="og:locale" />
+    <meta content="https://recehstaking.github.io/images/receh-staking-banner.webp" property="og:image" />
+    <meta content="Staking RECEH di BNB Smart Chain" property="og:image:alt" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Staking RECEH: ROI Harian &amp; Referral 10 Level" name="twitter:title" />
+    <meta
+        content="Staking RECEH di BNB Smart Chain dengan ROI harian dan referral 10 level. Stake $RECEH, pantau reward, cek downline, dan lihat penghasilan referral secara on-chain."
+        name="twitter:description" />
+    <meta content="https://recehstaking.github.io/images/receh-staking-banner.webp" name="twitter:image" />
+    <meta content="Staking RECEH di BNB Smart Chain" name="twitter:image:alt" />
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "SoftwareApplication",
     "name": "RECEH Staking",
     "url": "https://recehstaking.github.io/",
-    "description": "Platform staking terdesentralisasi untuk token RECEH di BNB Smart Chain dengan ROI harian dan bonus referral 10 level.",
+    "description": "Platform staking RECEH di BNB Smart Chain dengan ROI harian dan reward referral 10 level.",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web Browser",
-    "browserRequirements": "Membutuhkan dompet Web3 yang kompatibel dengan EVM (MetaMask, Trust Wallet, TokenPocket)",
-    "inLanguage": "id-ID",
-    "offers": {
-        "@type": "Offer",
-        "description": "Staking RECEH dengan ROI harian 0.32% dan bonus referral"
-    }
+    "browserRequirements": "Membutuhkan dompet Web3 yang kompatibel dengan EVM",
+    "inLanguage": "id-ID"
 }
 </script>
-
     <script src="https://cdn.jsdelivr.net/npm/ethers@6.15.0/dist/ethers.umd.min.js">
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
     <!-- ========== CSS FILE ========== -->
-    <link rel="stylesheet" href="style.css">
-
+    <link href="style.css" rel="stylesheet" />
     <!-- ========== TVL CHART LIBRARY ========== -->
     <script
         src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
-
 </head>
 
 <body>
-
     <!-- ============================================================
     HEADER
     ============================================================ -->
     <header>
         <div class="wrap">
-            <!-- Logo + Wallet -->
+            Logo + Dompet
             <div class="header-top">
                 <div class="brand" onclick="showTab('dashboard')">
-                    <img class="brand-logo"
-                        src="https://raw.githubusercontent.com/cryptorecehcom/images/refs/heads/main/logo-receh-bsc-256x256.png"
-                        alt="RECEH Token">
+                    <img alt="RECEH Token" class="brand-logo"
+                        src="https://raw.githubusercontent.com/cryptorecehcom/images/refs/heads/main/logo-receh-bsc-256x256.png" />
                     <div>
-                        <div class="brand-title">RECEH Staking</div>
+                        <div class="brand-title">Staking RECEH</div>
                         <div class="brand-sub">Platform staking Web3 untuk $RECEH</div>
                     </div>
                 </div>
                 <div class="header-wallet">
-                    <button id="connectBtn" class="wallet red" type="button">
-                        <i class="fa-solid fa-plug"></i>&nbsp;Hubungkan Dompet
+                    <button class="wallet red" id="connectBtn" type="button">
+                        <i class="fa-solid fa-plug"></i> Hubungkan Dompet
                     </button>
                 </div>
             </div>
-
             <!-- NAV Menu -->
             <nav class="nav-bar" id="navBar">
                 <button class="tab active" data-tab="dashboard">
                     <i class="fa-solid fa-user-tie"></i> Dasbor
                 </button>
                 <button class="tab" data-tab="stake">
-                    <i class="fa-solid fa-piggy-bank"></i> Stake
+                    <i class="fa-solid fa-piggy-bank"></i> Staking
                 </button>
                 <button class="tab" data-tab="network">
                     <i class="fa-solid fa-network-wired"></i> Referral
@@ -108,52 +91,43 @@
                 <button class="tab" data-tab="calculator">
                     <i class="fa-solid fa-calculator"></i> Kalkulator
                 </button>
-                <button id="ownerTabNav" class="tab owner-tab" data-tab="owner">
-                    <i class="fa-solid fa-crown"></i> Owner
+                <button class="tab owner-tab" data-tab="owner" id="ownerTabNav">
+                    <i class="fa-solid fa-crown"></i> Pemilik
                 </button>
             </nav>
         </div>
     </header>
-
     <!-- ============================================================
     MAIN CONTENT
     ============================================================ -->
     <main class="wrap">
-
         <!-- HERO -->
-        <section class="hero" aria-labelledby="heroTitle">
+        <section aria-labelledby="heroTitle" class="hero">
             <div class="hero-content">
                 <span class="eyebrow">
-                    <i></i>BNB Smart Chain • $RECEH • On-Chain
+                    <i></i>BNB Smart Chain • $RECEH • On-chain
                 </span>
-
                 <h1 id="heroTitle">Stake $RECEH.</h1>
-
                 <p>
-                    Stake $RECEH melalui smart contract di BNB Smart Chain.
-                    Lacak posisi staking, ROI, bonus referral, dan aktivitas on-chain Anda
-                    langsung dari dompet Web3 Anda.
+                    Stake $RECEH melalui smart contract di BNB Smart Chain. Pantau posisi staking, ROI, reward referral,
+                    dan aktivitas on-chain langsung dari dompet Web3 Anda.
                 </p>
-
                 <div class="hero-actions">
                     <button class="primary" data-tab="stake" type="button">
                         <i class="fa-solid fa-lock"></i> Mulai Staking
                     </button>
-
                     <button class="hero-guide-btn" data-tab="guide" type="button">
-                        <i class="fa-solid fa-circle-info"></i> Cara Kerja
+                        <i class="fa-solid fa-circle-info"></i> Cara Kerjanya
                     </button>
                 </div>
-
-                <div class="hero-points" aria-label="Fitur platform">
+                <div aria-label="Platform features" class="hero-points">
                     <span><i class="fa-solid fa-link"></i> On-chain</span>
                     <span><i class="fa-solid fa-wallet"></i> Dompet Web3</span>
-                    <span><i class="fa-solid fa-gas-pump"></i> BNB Gas</span>
-                    <span><i class="fa-solid fa-shield-halved"></i> Non-kustodian</span>
+                    <span><i class="fa-solid fa-gas-pump"></i> Gas BNB</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Non-kustodial</span>
                 </div>
             </div>
         </section>
-
         <!-- STATS -->
         <div class="stats">
             <div class="stat">
@@ -161,7 +135,7 @@
                 <strong id="balance">—</strong>
             </div>
             <div class="stat">
-                <label>Total Di-stake</label>
+                <label>Total Staking</label>
                 <strong id="staked">—</strong>
             </div>
             <div class="stat">
@@ -177,14 +151,14 @@
         <!-- ============================================================
         SECTION: DASHBOARD
         ============================================================ -->
-        <section id="dashboard" class="section active">
+        <section class="section active" id="dashboard">
             <div class="cols">
                 <div class="panel">
                     <div class="panel-title-row">
                         <h2>Posisi Anda</h2>
-                        <span id="positionStatus" class="badge gray">Dompet tidak terhubung</span>
+                        <span class="badge gray" id="positionStatus">Dompet belum terhubung</span>
                     </div>
-                    <div class="kv"><span>Total Di-stake</span><span id="dStaked">—</span></div>
+                    <div class="kv"><span>Total Staking</span><span id="dStaked">—</span></div>
                     <div class="kv"><span>Batas Maksimum</span><span id="dCap">—</span></div>
                     <div class="kv"><span>Total Diklaim</span><span id="dClaimed">—</span></div>
                     <div class="kv"><span>ROI Tertunda</span><span id="dPending">—</span></div>
@@ -194,16 +168,16 @@
                     <div class="kv"><span>Sisa Batas</span><span id="dCapRemaining">—</span></div>
                     <div class="kv"><span>Referrer</span><span id="dReferrer">—</span></div>
                     <div class="kv"><span>Status Leader</span><span id="dLeader">—</span></div>
-                    <div class="kv"><span>Status Batas Maks</span><span id="dCapStatus">—</span></div>
+                    <div class="kv"><span>Status Batas Maksimum</span><span id="dCapStatus">—</span></div>
                     <div class="progress"><i id="capProgress"></i></div>
-                    <div class="small muted" style="margin-top:5px" id="capText">—</div>
+                    <div class="small muted" id="capText" style="margin-top:5px">—</div>
                     <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap;">
-                        <button id="refreshBtn" class="outline"
+                        <button class="outline" id="refreshBtn"
                             style="font-size:10px;padding:4px 12px;min-height:28px;">
-                            <i class="fa-solid fa-rotate"></i>&nbsp;Segarkan
+                            <i class="fa-solid fa-rotate"></i> Segarkan
                         </button>
-                        <span class="small muted" id="lastRefreshTime" style="align-self:center;font-size:8px;">Segarkan
-                            terakhir: —</span>
+                        <span class="small muted" id="lastRefreshTime"
+                            style="align-self:center;font-size:8px;">Pembaruan terakhir: —</span>
                     </div>
                 </div>
                 <div class="panel">
@@ -211,89 +185,80 @@
                         <h2>Klaim</h2>
                         <span class="badge blue">On-chain</span>
                     </div>
-                    <div class="notice info">Jumlah yang dapat diklaim ditentukan oleh smart contract yang diterapkan.
-                    </div>
+                    <div class="notice info">Jumlah yang dapat diklaim ditentukan oleh smart contract yang telah
+                        diterapkan.</div>
                     <div style="height:8px"></div>
                     <div class="actions">
-                        <button class="success" id="claimRoiBtn" disabled
+                        <button class="success" disabled="" id="claimRoiBtn"
                             style="font-size:10px;padding:6px 12px;min-height:30px;"><i
-                                class="fa-solid fa-gift"></i>&nbsp;Klaim ROI</button>
-                        <button id="claimReferralBtn" disabled
+                                class="fa-solid fa-gift"></i> Klaim ROI</button>
+                        <button disabled="" id="claimReferralBtn"
                             style="font-size:10px;padding:6px 12px;min-height:30px;"><i
-                                class="fa-solid fa-award"></i>&nbsp;Klaim Referral</button>
+                                class="fa-solid fa-award"></i> Klaim Referral</button>
                     </div>
                     <div style="height:10px"></div>
                     <div class="kv"><span>ROI Harian</span><span id="dailyRoi">—</span></div>
                     <div class="kv"><span>Bonus Leader</span><span id="leaderBonus">—</span></div>
-                    <div class="kv"><span>Stake Minimum</span><span id="minStake">—</span></div>
+                    <div class="kv"><span>Staking Minimum</span><span id="minStake">—</span></div>
                     <div class="kv"><span>ROI Tersedia</span><span id="roiClaimAmount">—</span></div>
                     <div class="kv"><span>Bonus Referral Tersedia</span><span id="referralClaimAmount">—</span></div>
                 </div>
             </div>
-
             <!-- TVL CHART USD -->
             <div class="panel" style="margin-top:14px;">
                 <div class="panel-title-row">
                     <h2 style="font-size:14px;">
-                        <i class="fa-solid fa-chart-simple"></i> Total Di-stake (TVL) — ROI Staking
+                        <i class="fa-solid fa-chart-simple"></i> Total Staking (TVL) — Staking ROI
                     </h2>
                     <span class="badge green" style="font-size:8px;padding:2px 8px;">
-                        <i class="fa-solid fa-circle" style="font-size:6px;"></i> Live
+                        <i class="fa-solid fa-circle" style="font-size:6px;"></i> Langsung
                     </span>
                 </div>
-
                 <!-- CHART CONTAINER -->
                 <div id="tvlChartContainer"
                     style="position:relative;width:100%;height:220px;min-height:180px;max-height:280px;">
                     <div id="tvlChart" style="width:100%;height:100%;"></div>
                 </div>
-
                 <!-- TVL STATISTICS CARDS -->
                 <div
                     style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin-top:10px;padding:8px 10px;background:rgba(15,18,32,0.4);border-radius:var(--radius);border:1px solid rgba(34,197,94,0.06);">
-
-                    <!-- TVL Current Value -->
+                    Nilai TVL Saat Ini
                     <div style="text-align:center;padding:4px 0;">
                         <div style="font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:0.3px;">TVL
                             BSC
                         </div>
-                        <div style="font-size:14px;font-weight:700;color:var(--green);" id="tvlCurrentValue">—</div>
-                        <div style="font-size:8px;color:var(--muted);" id="tvlCurrencyLabel">Memuat...</div>
+                        <div id="tvlCurrentValue" style="font-size:14px;font-weight:700;color:var(--green);">—</div>
+                        <div id="tvlCurrencyLabel" style="font-size:8px;color:var(--muted);">Memuat...</div>
                     </div>
-
-                    <!-- RECEH Price -->
+                    Harga RECEH
                     <div style="text-align:center;padding:4px 0;">
                         <div style="font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:0.3px;">
                             Harga RECEH</div>
-                        <div style="font-size:14px;font-weight:700;color:var(--gold);" id="tvlRecehPrice">—</div>
+                        <div id="tvlRecehPrice" style="font-size:14px;font-weight:700;color:var(--gold);">—</div>
                         <div style="font-size:8px;color:var(--muted);">USD</div>
                     </div>
-
-                    <!-- Data Points -->
+                    Titik Data
                     <div style="text-align:center;padding:4px 0;">
                         <div style="font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:0.3px;">
                             Titik Data</div>
-                        <div style="font-size:14px;font-weight:700;color:var(--text);" id="tvlDataPoints">—</div>
-                        <div style="font-size:8px;color:var(--muted);">Total Riwayat</div>
+                        <div id="tvlDataPoints" style="font-size:14px;font-weight:700;color:var(--text);">—</div>
+                        <div style="font-size:8px;color:var(--muted);">Riwayat Total</div>
                     </div>
-
-                    <!-- Min / Max -->
+                    Minimum / Maksimum
                     <div style="text-align:center;padding:4px 0;">
                         <div style="font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:0.3px;">
-                            Sepanjang Masa</div>
-                        <div style="font-size:11px;font-weight:600;color:var(--text2);" id="tvlMinMax">—</div>
-                        <div style="font-size:8px;color:var(--muted);">Min / Maks</div>
+                            Sepanjang Waktu</div>
+                        <div id="tvlMinMax" style="font-size:11px;font-weight:600;color:var(--text2);">—</div>
+                        <div style="font-size:8px;color:var(--muted);">Minimum / Maksimum</div>
                     </div>
-
                 </div>
-
                 <!-- FOOTER INFO -->
                 <div
                     style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;margin-top:6px;padding:0 2px;">
                     <span style="font-size:9px;color:var(--muted);">
                         <i class="fa-solid fa-database"></i> BSC Mainnet
                     </span>
-                    <span style="font-size:9px;color:var(--muted2);" id="tvlLastUpdate">
+                    <span id="tvlLastUpdate" style="font-size:9px;color:var(--muted2);">
                         <i class="fa-regular fa-clock"></i> —
                     </span>
                     <span style="font-size:8px;color:var(--green);">
@@ -305,54 +270,58 @@
             <div class="panel">
                 <div class="panel-title-row">
                     <h2>Informasi Kontrak</h2>
-                    <span class="badge green">Live On-chain</span>
+                    <span class="badge green">Aktif On-chain</span>
                 </div>
                 <div class="contract-grid">
                     <div class="contract-item">
-                        <label><i class="fa-solid fa-coins"></i> Saldo Reward Pool</label>
+                        <label><i class="fa-solid fa-coins"></i> Saldo Pool Reward</label>
                         <strong id="contractPoolBalance" style="color:var(--green);">—</strong>
-                        <span class="small muted" style="display:block;font-size:7px;margin-top:1px;">Token tersedia
-                            untuk reward</span>
+                        <span class="small muted" style="display:block;font-size:7px;margin-top:1px;">Token yang
+                            tersedia untuk reward</span>
                     </div>
                     <div class="contract-item"><label>Jaringan</label><strong id="contractNetwork"><i
                                 class="fa-brands fa-ethereum"></i> BNB Smart
                             Chain</strong></div>
                     <div class="contract-item"><label><i class="fa-solid fa-coins"></i> Token Staking</label><strong
                             id="contractToken">—</strong></div>
-                    <div class="contract-item"><label><i class="fa-solid fa-cash-register"></i> Stake
+                    <div class="contract-item"><label><i class="fa-solid fa-cash-register"></i> Staking
                             Minimum</label><strong id="contractMin">—</strong></div>
                     <div class="contract-item"><label><i class="fa-solid fa-money-bill-trend-up"></i> ROI
                             Harian</label><strong id="contractRoi">—</strong></div>
                     <div class="contract-item"><label><i class="fa-solid fa-user-tie"></i> Bonus Leader</label><strong
                             id="contractLeader">—</strong></div>
+                    <div class="contract-item"><label><i class="fa-solid fa-layer-group"></i> Maks. Level
+                            Referral</label><strong id="contractMaxReferralLevels">—</strong></div>
+                    <div class="contract-item"><label><i class="fa-solid fa-users"></i> Maks. Downline
+                            Langsung</label><strong id="contractMaxDirectDownlines">—</strong></div>
+                    <div class="contract-item"><label><i class="fa-solid fa-percent"></i> Maks. BPS</label><strong
+                            id="contractMaxBps">—</strong></div>
                     <div class="contract-item">
-                        <label><i class="fa-solid fa-wallet"></i> Admin Leftover</label>
-                        <strong id="contractLeftover"
-                            style="font-size:10px;word-break:break-all;">0xaE69177e56FFb61b2d201666250d7dfC7b72A2F7</strong>
+                        <label><i class="fa-solid fa-wallet"></i> Sisa Admin</label>
+                        <strong id="contractLeftover" style="font-size:10px;word-break:break-all;">—</strong>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- ============================================================
         SECTION: STAKE
         ============================================================ -->
-        <section id="stake" class="section">
+        <section class="section" id="stake">
             <div class="cols">
                 <div class="panel">
                     <div class="panel-title-row">
                         <h2>Stake RECEH</h2>
                         <span class="badge blue">On-chain</span>
                     </div>
-                    <div id="stakeStatus" class="notice info" style="display:none;">
-                        <i class="fa-solid fa-circle-info"></i>&nbsp;<span id="stakeStatusText">Memproses...</span>
+                    <div class="notice info" id="stakeStatus" style="display:none;">
+                        <i class="fa-solid fa-circle-info"></i> <span id="stakeStatusText">Memproses...</span>
                     </div>
                     <div class="notice danger"
                         style="margin-top:6px;border-color:#662638;background:#1a0d14;font-size:10px;">
-                        <i class="fa-solid fa-lock" style="color:#ff8c9c;"></i>&nbsp;
+                        <i class="fa-solid fa-lock" style="color:#ff8c9c;"></i> 
                         <strong style="color:#ff8c9c;">PENTING:</strong>
-                        <span style="color:#ffadb9;">Token RECEH yang di-stake <strong>TIDAK BISA</strong> ditarik
-                            kembali. Hanya reward yang dapat diklaim.</span>
+                        <span style="color:#ffadb9;">Staked RECEH tokens <strong>CANNOT</strong> ditarik kembali. Hanya
+                            reward yang dapat diklaim.</span>
                     </div>
                     <div class="notice warn" style="margin-top:6px;font-size:10px;">BNB diperlukan untuk biaya gas di
                         BNB Smart Chain.</div>
@@ -360,24 +329,24 @@
                     <div class="form">
                         <div>
                             <label class="label">Jumlah RECEH</label>
-                            <input id="stakeAmount" inputmode="decimal" placeholder="0.0" autocomplete="off">
-                            <div id="stakeAmountError" class="small muted"
+                            <input autocomplete="off" id="stakeAmount" inputmode="decimal" placeholder="0.0" />
+                            <div class="small muted" id="stakeAmountError"
                                 style="color:#ff8c9c;display:none;margin-top:3px;"></div>
-                            <div id="gasEstimate" class="small muted" style="margin-top:3px;display:none;"></div>
+                            <div aria-hidden="true" class="small muted" id="gasEstimate" style="display:none;"></div>
                         </div>
                         <div>
                             <label class="label">Alamat Referrer</label>
-                            <input id="referrer" placeholder="0x... (opsional)">
+                            <input id="referrer" placeholder="0x... (opsional)" />
                         </div>
                         <div class="actions">
-                            <button id="approveBtn" disabled
+                            <button disabled="" id="approveBtn"
                                 style="font-size:10px;padding:5px 12px;min-height:28px;">Setujui RECEH</button>
-                            <button class="primary hidden" id="stakeBtn" disabled
+                            <button class="primary hidden" disabled="" id="stakeBtn"
                                 style="font-size:10px;padding:5px 12px;min-height:28px;">Stake RECEH</button>
-                            <button id="maxBtn" disabled
-                                style="font-size:10px;padding:5px 12px;min-height:28px;">Maks</button>
+                            <button disabled="" id="maxBtn"
+                                style="font-size:10px;padding:5px 12px;min-height:28px;">Maks.</button>
                         </div>
-                        <div class="small muted" id="allowanceText">Persetujuan: —</div>
+                        <div class="small muted" id="allowanceText">Allowance: —</div>
                         <div class="small muted" id="bnbBalanceText">Saldo BNB: —</div>
                         <div class="small muted" id="balanceStakeText">Saldo RECEH: —</div>
                     </div>
@@ -389,66 +358,131 @@
                     </div>
                     <div class="kv"><span>Aset</span><span>RECEH BEP-20</span></div>
                     <div class="kv"><span>Gas Jaringan</span><span>BNB</span></div>
-                    <div class="kv"><span>Stake Minimum</span><span id="stakeMin">—</span></div>
+                    <div class="kv"><span>Staking Minimum</span><span id="stakeMin">—</span></div>
                     <div class="kv"><span>ROI Harian</span><span id="stakeRoi">—</span></div>
                     <div class="kv"><span>Batas Maksimum Anda</span><span id="stakeMaxCap">—</span></div>
-                    <div class="notice info" style="margin-top:10px;font-size:10px;">Aturan kontrak mengatur akuntansi
-                        aktual dan jumlah yang dapat diklaim.</div>
+                    <div class="notice info" style="margin-top:10px;font-size:10px;">Aturan kontrak menentukan
+                        perhitungan aktual dan jumlah yang dapat diklaim.</div>
                 </div>
             </div>
         </section>
-
         <!-- ============================================================
         SECTION: REFERRAL
         ============================================================ -->
-        <section id="network" class="section">
+        <section class="section" id="network">
             <div class="cols">
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Hub Referral</h2>
+                        <h2>Pusat Referral</h2>
                         <span class="badge">On-chain</span>
                     </div>
                     <div class="kv"><span>Alamat Anda</span><span id="myAddress">—</span></div>
                     <div class="kv"><span>Referrer Anda</span><span id="nReferrer">—</span></div>
                     <div class="kv"><span>Status Leader</span><span id="nLeader">—</span></div>
                     <button id="copyReferral" style="margin-top:8px;font-size:10px;padding:6px 14px;min-height:30px;"><i
-                            class="fa-regular fa-copy"></i>&nbsp;Salin Link Referral</button>
-                    <a href="https://cryptoreceh.com/staking/roi/downline/" target="_blank" rel="noopener noreferrer"
-                        style="font-size:10px;padding:6px 12px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;border:1px solid var(--green-border);background:var(--green-dark);color:#fff;cursor:pointer;font-weight:700;text-decoration:none;transition:background .16s ease,border-color .16s ease,transform .14s ease;">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>&nbsp;Cek Downline
+                            class="fa-regular fa-copy"></i> Salin Tautan Referral</button>
+                    <a href="https://tokoreceh.github.io/" rel="noopener noreferrer"
+                        style="font-size:10px;padding:6px 12px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:8px;border:1px solid var(--green-border);background:var(--green-dark);color:#fff;cursor:pointer;font-weight:700;text-decoration:none;transition:background .16s ease,border-color .16s ease,transform .14s ease;"
+                        target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Beli $RECEH
                     </a>
                     <div class="small muted" style="margin-top:6px;font-size:9px;">Alamat dompet Anda ditambahkan ke URL
                         referral.</div>
                 </div>
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Tingkat Bonus Referral</h2>
+                        <h2>Level Bonus Referral</h2>
                         <span class="badge blue">Data kontrak</span>
                     </div>
-                    <div id="levels">Hubungkan dompet untuk membaca tingkat saat ini.</div>
+                    <div id="levels">Hubungkan dompet untuk membaca level saat ini.</div>
                     <div class="small muted" style="margin-top:6px;font-size:9px;color:var(--muted2);">
-                        <i class="fa-solid fa-info-circle"></i>&nbsp;Tingkat 1 = downline langsung Anda.
+                        <i class="fa-solid fa-info-circle"></i> Level 1 = downline langsung Anda.
                     </div>
                 </div>
             </div>
+            <div class="panel extended-network">
+                <div class="panel-title-row">
+                    <h2><i class="fa-solid fa-sitemap"></i> Jaringan Referral</h2>
+                    <span class="badge blue">Semua Level</span>
+                </div>
+                <div class="small muted" style="font-size:9px;">
+                    Menampilkan jaringan referral sampai Level 10. Level 1 adalah downline langsung; level berikutnya
+                    adalah turunan dari downline tersebut.
+                </div>
+                <div class="panel-title-row" style="margin-top:12px;">
+                    <h2 style="font-size:12px;"><i class="fa-solid fa-chart-bar"></i> Penghasilan Referral per Level
+                    </h2>
+                    <span class="small muted" id="networkLevelsUpdated">—</span>
+                </div>
+                <div class="level-earnings" id="networkLevelEarnings"></div>
+                <div class="small muted" id="networkLevelTotals" style="margin-top:7px;text-align:center;"></div>
+                <div class="panel-title-row" style="margin-top:14px;">
+                    <h2 style="font-size:12px;"><i class="fa-solid fa-users"></i> Anggota Jaringan Referral</h2>
+                    <span class="badge" id="downlineCountBadge">0</span>
+                </div>
+                <div class="network-table-wrap">
+                    <table class="network-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Level</th>
+                                <th>Dompet</th>
+                                <th>Staking</th>
+                                <th>Referral Diperoleh</th>
+                                <th>Klaim Referral</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="downlineTableBody">
+                            <tr>
+                                <td class="network-empty" colspan="7">Hubungkan dompet untuk memuat jaringan referral.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="network-controls">
+                    <div class="page-info" id="downlinePageInfo">—</div>
+                    <div style="display:flex;gap:5px;">
+                        <button disabled="" id="downlinePrev" style="font-size:9px;padding:5px 10px;min-height:26px;"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button disabled="" id="downlineNext" style="font-size:9px;padding:5px 10px;min-height:26px;"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                        <button id="refreshNetworkBtn" style="font-size:9px;padding:5px 10px;min-height:26px;"><i
+                                class="fa-solid fa-rotate"></i> Segarkan</button>
+                    </div>
+                </div>
+                <div class="panel-title-row" style="margin-top:14px;">
+                    <h2 style="font-size:12px;"><i class="fa-solid fa-magnifying-glass"></i> Pemeriksa Pasangan Referral
+                    </h2>
+                    <span class="small muted">Riwayat referral on-chain</span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr auto;gap:6px;align-items:end;">
+                    <div><label class="label">Dompet downline</label><input id="refPairWallet" inputmode="text"
+                            placeholder="0x..." style="font-size:11px;padding:7px 9px;" /></div>
+                    <button id="inspectRefPairBtn" style="font-size:9px;padding:7px 12px;min-height:30px;"><i
+                            class="fa-solid fa-search"></i> Periksa</button>
+                </div>
+                <div class="notice info" id="refPairResult" style="margin-top:7px;font-size:9px;">Periksa satu dompet
+                    untuk melihat penghasilan referral yang dikreditkan kepada Anda.</div>
+            </div>
         </section>
-
         <!-- ============================================================
         SECTION: CALCULATOR
         ============================================================ -->
-        <section id="calculator" class="section">
+        <section class="section" id="calculator">
             <div class="panel">
                 <div class="panel-title-row">
                     <h2><i class="fa-solid fa-calculator"></i> Kalkulator Staking</h2>
-                    <span class="badge green">Perkiraan</span>
+                    <span class="badge green">Estimasi</span>
                 </div>
                 <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
                     <span class="badge green" style="font-size:8px;"><i class="fa-solid fa-database"></i> Data dari
                         Kontrak</span>
-                    <span class="small muted" style="font-size:9px;" id="contractDataTime">Diperbarui: --</span>
+                    <span class="small muted" id="contractDataTime" style="font-size:9px;">Diperbarui: --</span>
                 </div>
                 <div class="notice info small" style="margin-bottom:10px;font-size:10px;">
-                    <i class="fa-solid fa-circle-info"></i>&nbsp;Kalkulator ini memberikan <strong>perkiraan</strong>
+                    <i class="fa-solid fa-circle-info"></i> Kalkulator ini memberikan <strong>estimasi</strong>
                     berdasarkan parameter kontrak saat ini.
                 </div>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
@@ -458,101 +492,111 @@
                                 class="fa-solid fa-sliders"></i> Parameter Staking</h3>
                         <div class="form">
                             <div>
-                                <label class="label">Jumlah Stake Anda (RECEH)</label>
+                                <label class="label">Jumlah Staking Anda (RECEH)</label>
                                 <div class="calc-input-wrapper">
-                                    <input id="calcAmount" type="number" inputmode="decimal" value="100" min="1"
-                                        step="1">
+                                    <input id="calcAmount" inputmode="decimal" min="1" step="1" type="number"
+                                        value="100" />
                                     <span>RECEH</span>
                                 </div>
                             </div>
                             <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
                                 <div>
                                     <label class="label">ROI Harian (%)</label>
-                                    <input id="calcRoi" type="number" inputmode="decimal" value="0.32" min="0.01"
-                                        step="0.01" disabled
-                                        style="opacity:0.7;cursor:not-allowed;font-size:12px;padding:6px 10px;">
+                                    <input disabled="" id="calcRoi" inputmode="decimal" min="0.01" step="0.01"
+                                        style="opacity:0.7;cursor:not-allowed;font-size:12px;padding:6px 10px;"
+                                        type="number" value="0.32" />
                                 </div>
                                 <div>
-                                    <label class="label">Batas Maks (%)</label>
-                                    <input id="calcMaxCapPct" type="number" inputmode="decimal" value="200" min="100"
-                                        step="1" disabled
-                                        style="opacity:0.7;cursor:not-allowed;font-size:12px;padding:6px 10px;">
+                                    <label class="label">Batas Maksimum (%)</label>
+                                    <input disabled="" id="calcMaxCapPct" inputmode="decimal" min="100" step="1"
+                                        style="opacity:0.7;cursor:not-allowed;font-size:12px;padding:6px 10px;"
+                                        type="number" value="200" />
                                     <span class="small muted" style="font-size:8px;display:block;margin-top:1px;">🔒
                                         Tetap 200%</span>
                                 </div>
                             </div>
                             <div style="border-top:1px solid rgba(245,158,11,0.06);padding-top:8px;margin-top:4px;">
                                 <label class="label" style="margin-bottom:4px;">
-                                    <i class="fa-solid fa-users"></i> Downline Aktif per Tingkat
+                                    <i class="fa-solid fa-users"></i> Downline Aktif per Level
                                     <span class="small muted" style="font-weight:400;font-size:8px;display:block;">(Isi
-                                        berapa orang di setiap tingkat yang mengklaim ROI setiap hari)</span>
+                                        jumlah orang di setiap level yang mengklaim ROI setiap hari)</span>
                                 </label>
                                 <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3px;">
                                     <div><label class="small muted" style="font-size:7px;">L1</label><input id="calcDl1"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L2</label><input id="calcDl2"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L3</label><input id="calcDl3"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L4</label><input id="calcDl4"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L5</label><input id="calcDl5"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L6</label><input id="calcDl6"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L7</label><input id="calcDl7"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L8</label><input id="calcDl8"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L9</label><input id="calcDl9"
-                                            type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                     <div><label class="small muted" style="font-size:7px;">L10</label><input
-                                            id="calcDl10" type="number" value="1" min="0" max="9999"
-                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;">
+                                            id="calcDl10" max="9999" min="0"
+                                            style="width:100%;padding:3px 2px;font-size:10px;text-align:center;background:rgba(15,18,32,0.8);color:var(--text);border:1px solid rgba(245,158,11,0.08);border-radius:4px;outline:none;"
+                                            type="number" value="1" />
                                     </div>
                                 </div>
                             </div>
                             <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:3px;">
                                 <div>
-                                    <label class="label">Stake Downline (RECEH)</label>
-                                    <input id="calcDownlineStake" type="number" inputmode="decimal" value="100" min="1"
-                                        step="1" style="font-size:12px;padding:6px 10px;">
-                                    <span class="small muted" style="font-size:8px;">Rata-rata stake</span>
+                                    <label class="label">Staking Downline (RECEH)</label>
+                                    <input id="calcDownlineStake" inputmode="decimal" min="1" step="1"
+                                        style="font-size:12px;padding:6px 10px;" type="number" value="100" />
+                                    <span class="small muted" style="font-size:8px;">Rata-rata staking</span>
                                 </div>
                                 <div>
                                     <label class="label">Sertakan Referral?</label>
                                     <select id="calcIncludeReferral" style="font-size:12px;padding:6px 10px;">
-                                        <option value="true" selected>✅ Ya</option>
+                                        <option selected="" value="true">✅ Ya</option>
                                         <option value="false">❌ Tidak</option>
                                     </select>
                                 </div>
                             </div>
-                            <button id="calcBtn" class="primary"
+                            <button class="primary" id="calcBtn"
                                 style="width:100%;margin-top:3px;font-size:11px;padding:6px 12px;min-height:32px;"><i
                                     class="fa-solid fa-calculator"></i> Hitung</button>
                         </div>
                         <div style="margin-top:10px;padding-top:8px;border-top:1px solid rgba(245,158,11,0.06);">
                             <div class="small muted" style="font-size:10px;">
-                                <i class="fa-solid fa-info-circle"></i>&nbsp;
-                                <strong>Tingkat Referral:</strong><br>
+                                <i class="fa-solid fa-info-circle"></i> 
+                                <strong>Level Referral:</strong><br />
                                 <span id="calculatorLevelsDisplay">Memuat...</span>
                             </div>
                         </div>
@@ -560,631 +604,435 @@
                     <div id="calcResults"
                         style="background:rgba(15,18,32,0.4);border-radius:var(--radius);padding:12px 14px;border:1px solid rgba(245,158,11,0.06);min-height:240px;">
                         <h3 style="font-size:12px;margin-bottom:8px;color:var(--text);"><i
-                                class="fa-solid fa-chart-simple"></i> Hasil Perkiraan</h3>
+                                class="fa-solid fa-chart-simple"></i> Hasil Estimasi</h3>
                         <div class="notice info" style="text-align:center;padding:16px;font-size:11px;">
                             <i class="fa-solid fa-calculator"
                                 style="font-size:20px;display:block;margin-bottom:6px;"></i>
-                            Masukkan parameter dan klik <strong>"Hitung"</strong>
+                            Masukkan parameter lalu klik <strong>"Calculate"</strong>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- ============================================================
         SECTION: ABOUT
         ============================================================ -->
-        <section id="about" class="section">
+        <section class="section" id="about">
             <div class="panel">
                 <div class="panel-title-row">
-                    <h2><i class="fa-solid fa-info-circle"></i> Tentang RECEH</h2>
-                    <span class="badge green">Live</span>
+                    <h2><i class="fa-solid fa-circle-info"></i> Tentang RECEH</h2>
+                    <span class="badge green">On-chain</span>
                 </div>
-
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0;">
-                    <div class="contract-item">
-                        <label>Nama Token</label>
-                        <strong>RECEH</strong>
-                    </div>
-                    <div class="contract-item">
-                        <label>Ticker</label>
-                        <strong style="color:var(--green);">$RECEH</strong>
-                    </div>
-                    <div class="contract-item">
-                        <label>Total Pasokan</label>
-                        <strong>100.000.000 RECEH</strong>
-                    </div>
-                    <div class="contract-item">
-                        <label>Jaringan</label>
-                        <strong>BNB Smart Chain</strong>
-                    </div>
-                    <div class="contract-item">
-                        <label>Kontrak</label>
-                        <strong
+                <div class="notice info" style="margin-bottom:10px;">
+                    <strong>Staking RECEH</strong> adalah aplikasi staking on-chain untuk $RECEH di BNB Smart Chain.
+                    Situs ini merupakan antarmuka; posisi staking, perhitungan reward, hubungan referral, dan transaksi
+                    klaim ditangani oleh smart contract yang diterapkan.
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:8px 0;">
+                    <div class="contract-item"><label>Token</label><strong>RECEH / $RECEH</strong></div>
+                    <div class="contract-item"><label>Jaringan</label><strong>BNB Smart Chain</strong></div>
+                    <div class="contract-item"><label>Total Suplai</label><strong>100,000,000 RECEH</strong></div>
+                    <div class="contract-item"><label>Desimal</label><strong>18</strong></div>
+                    <div class="contract-item" style="grid-column:1/-1;"><label>Kontrak Staking</label><strong
                             style="font-size:10px;word-break:break-all;">0x4c9C431Fa7fD104c0E7230d20E1623E62019A1C5</strong>
                     </div>
-                    <div class="contract-item">
-                        <label>Desimal</label>
-                        <strong>18</strong>
-                    </div>
                 </div>
-
-                <div class="notice info" style="margin:6px 0;font-size:11px;">
-                    <i class="fa-solid fa-star"></i>&nbsp;
-                    <strong>RECEH</strong> adalah token utilitas resmi dari ekosistem Crypto RECEH. Dirancang untuk
-                    <strong>menggerakkan layanan crypto generasi berikutnya, memberi penghargaan atas inovasi</strong>
-                    dan mendorong masa depan terdesentralisasi.
-                    <br><br>
-                    <strong>Fitur Staking Utama:</strong>
-                    <ul style="margin:4px 0 0 16px;font-size:11px;color:var(--text2);">
-                        <li>💰 Staking — Stake RECEH untuk mendapatkan reward harian</li>
-                        <li>🔗 Sistem Referral — Dapatkan reward dari 10 tingkat referral</li>
-                        <li>👑 Bonus Leader — Buka reward tambahan sebagai leader</li>
-                    </ul>
+                <h3 style="font-size:13px;color:var(--text);margin:14px 0 7px;"><i class="fa-solid fa-gears"></i> Yang
+                    Dikendalikan Kontrak</h3>
+                <div class="guide-comparison">
+                    <div class="comp-row header"><span>Fungsi</span><span>Fungsinya</span></div>
+                    <div class="comp-row"><span class="comp-label">Staking</span><span>Membuat posisi staking
+                            menggunakan jumlah RECEH dan referrer yang dipilih.</span></div>
+                    <div class="comp-row"><span class="comp-label">ROI Harian</span><span>Akumulasi reward dihitung
+                            berdasarkan parameter ROI kontrak saat ini.</span></div>
+                    <div class="comp-row"><span class="comp-label">Referral</span><span>Reward referral didistribusikan
+                            melalui struktur referral 10 level kontrak ketika kondisi kontrak terpenuhi.</span></div>
+                    <div class="comp-row"><span class="comp-label">Max Cap</span><span>Perhitungan reward mengikuti
+                            aturan batas maksimum yang tersimpan di kontrak.</span></div>
+                    <div class="comp-row"><span class="comp-label">Klaim</span><span>Reward ROI dan referral diklaim
+                            melalui fungsi kontrak.</span></div>
                 </div>
-
-                <h3 style="font-size:13px;color:var(--text);margin:12px 0 6px;">
-                    <i class="fa-solid fa-chart-pie"></i> Tokenomik
-                </h3>
-                <div class="tokenomics-section">
-                    <div class="pie-chart-container">
-                        <div class="pie-chart">
-                            <div class="pie-center">
-                                <span class="pct">100%</span>
-                                <span class="label">Total Pasokan</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pie-legend">
-                        <div class="legend-item">
-                            <span class="color-dot" style="background:#a855f7;"></span>
-                            <span class="legend-text">
-                                <strong>Tim Pengembang &amp; Cadangan Masa Depan</strong> — Pengembangan inti, operasi,
-                                pemeliharaan, dan cadangan untuk pertumbuhan ekosistem di masa depan.
-                            </span>
-                            <span class="legend-pct" style="color:#a855f7;">40%</span>
-                        </div>
-
-                        <div class="legend-item">
-                            <span class="color-dot" style="background:#00ff88;"></span>
-                            <span class="legend-text">
-                                <strong>Reward Staking Multichain</strong> — Reward yang mendukung program staking APY
-                                dan ROI di berbagai jaringan blockchain.
-                            </span>
-                            <span class="legend-pct" style="color:#00ff88;">10%</span>
-                        </div>
-
-                        <div class="legend-item">
-                            <span class="color-dot" style="background:#fbbf24;"></span>
-                            <span class="legend-text">
-                                <strong>Penjualan Publik &amp; Likuiditas DEX</strong> — 5% untuk distribusi publik dan
-                                10% untuk likuiditas DEX guna mendukung akses pasar dan perdagangan.
-                            </span>
-                            <span class="legend-pct" style="color:#fbbf24;">15%</span>
-                        </div>
-
-                        <div class="legend-item">
-                            <span class="color-dot" style="background:#f97316;"></span>
-                            <span class="legend-text">
-                                <strong>Komunitas &amp; Reward Pengguna</strong> — Giveaway, cashback untuk pengguna
-                                yang memenuhi syarat dari layanan kami, dan inisiatif reward komunitas.
-                            </span>
-                            <span class="legend-pct" style="color:#f97316;">15%</span>
-                        </div>
-
-                        <div class="legend-item">
-                            <span class="color-dot" style="background:#60a5fa;"></span>
-                            <span class="legend-text">
-                                <strong>Kemitraan Strategis</strong> — Mendukung mitra dan kolaborator yang
-                                berkontribusi pada pengembangan bersama, adopsi, dan perluasan ekosistem jangka panjang.
-                            </span>
-                            <span class="legend-pct" style="color:#60a5fa;">20%</span>
-                        </div>
-                    </div>
+                <h3 style="font-size:13px;color:var(--text);margin:14px 0 7px;"><i class="fa-solid fa-layer-group"></i>
+                    Level Referral</h3>
+                <div class="notice info" style="font-size:10px;">
+                    Persentase referral disimpan on-chain dalam BPS (10.000 BPS = 100%). Antarmuka membaca nilai saat
+                    ini dari kontrak. Jadwal 10 level yang dikonfigurasi adalah <strong>10% / 3% / 2% / 1.5% / 1% /
+                        0.75% / 0.6% / 0.5% / 0.4% /
+                        0.25%</strong>, setara dengan <strong>1,900 BPS (19%)</strong> jika dijumlahkan sebagai
+                    persentase.
                 </div>
-
+                <h3 style="font-size:13px;color:var(--text);margin:14px 0 7px;"><i class="fa-solid fa-eye"></i>
+                    Transparansi</h3>
+                <p style="font-size:11px;color:var(--text2);line-height:1.65;">
+                    Sumber kebenaran yang paling utama adalah kontrak yang diterapkan dan status on-chain saat ini.
+                    Gunakan dasbor untuk memantau posisi Anda, gunakan tab referral untuk memeriksa jaringan Anda, dan
+                    verifikasi transaksi melalui dompet atau penjelajah BNB Smart Chain. Jika antarmuka dan status
+                    kontrak berbeda, jadikan status on-chain sebagai acuan.
+                </p>
                 <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(168,85,247,0.06);">
                     <h4 style="font-size:11px;color:var(--text);margin-bottom:6px;"><i class="fa-solid fa-link"></i>
-                        Link Resmi</h4>
+                        Tautan Resmi</h4>
                     <div class="social-links">
                         <a href="https://cryptoreceh.com/token/" target="_blank"><i class="fa-solid fa-globe"></i>
-                            Website</a>
+                            Situs Web</a>
                         <a href="https://x.com/cryptoreceh_" target="_blank"><i class="fa-brands fa-twitter"></i>
                             Twitter</a>
                         <a href="https://t.me/receh_community" target="_blank"><i class="fa-brands fa-telegram"></i>
                             Telegram</a>
                         <a href="https://pancakeswap.finance/swap?outputCurrency=0x4c9C431Fa7fD104c0E7230d20E1623E62019A1C5"
-                            target="_blank"><i class="fa-solid fa-chart-line"></i> Trade</a>
+                            target="_blank"><i class="fa-solid fa-chart-line"></i> Trading</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ============================================================
-        SECTION: GUIDE
-        ============================================================ -->
-        <section id="guide" class="section">
+        <section class="section" id="guide">
             <div class="panel">
                 <div class="panel-title-row">
-                    <h2><i class="fa-brands fa-readme"></i> Panduan Staking</h2>
-                    <span class="badge cyan">Langkah demi Langkah</span>
+                    <h2><i class="fa-brands fa-readme"></i> Cara Menggunakan Staking RECEH</h2>
+                    <span class="badge cyan">Panduan Pengguna</span>
                 </div>
-
-                <div class="notice info" style="margin-bottom:8px;font-size:10px;">
-                    <i class="fa-solid fa-circle-info"></i>&nbsp; Ikuti langkah-langkah ini untuk mulai mendapatkan
-                    reward dengan Receh Staking.
+                <div class="notice info" style="margin-bottom:10px;">
+                    <strong>Alur sederhana:</strong> hubungkan dompet → setujui RECEH → stake → pantau reward → klaim
+                    jika memenuhi syarat. Simpan BNB di dompet untuk biaya transaksi blockchain.
                 </div>
-
-                <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
-                    <span class="badge green" style="font-size:8px;"><i class="fa-solid fa-check"></i> 5 Langkah</span>
-                    <span class="badge cyan" style="font-size:8px;"><i class="fa-solid fa-clock"></i> ~5-10 menit</span>
-                    <span class="badge gold" style="font-size:8px;"><i class="fa-solid fa-coins"></i> BNB untuk
-                        gas</span>
-                </div>
-
-                <!-- BENEFITS -->
-                <h4 style="font-size:12px;color:var(--text);margin:10px 0 6px;"><i class="fa-solid fa-star"></i> Manfaat
-                    Utama</h4>
-                <div class="guide-benefits">
-                    <div class="guide-benefit">
-                        <span class="benefit-icon">💰</span>
-                        <h5>ROI Harian</h5>
-                        <p>~116.8% APY</p>
-                        <span class="benefit-value">0.32% harian</span>
-                    </div>
-                    <div class="guide-benefit">
-                        <span class="benefit-icon">👥</span>
-                        <h5>10-Tingkat Referral</h5>
-                        <p>Dapatkan dari jaringan</p>
-                        <span class="benefit-value">10 tingkat</span>
-                    </div>
-                    <div class="guide-benefit">
-                        <span class="benefit-icon">👑</span>
-                        <h5>Bonus Leader</h5>
-                        <p>Reward ekstra</p>
-                        <span class="benefit-value">+10%</span>
-                    </div>
-                    <div class="guide-benefit">
-                        <span class="benefit-icon">🛡️</span>
-                        <h5>Batas Maks 200%</h5>
-                        <p>2× stake Anda</p>
-                        <span class="benefit-value">Berkelanjutan</span>
-                    </div>
-                    <div class="guide-benefit">
-                        <span class="benefit-icon">🔗</span>
-                        <h5>On-Chain</h5>
-                        <p>Transparan</p>
-                        <span class="benefit-value">Imutabel</span>
-                    </div>
-                    <div class="guide-benefit">
-                        <span class="benefit-icon">📈</span>
-                        <h5>Deflasioner</h5>
-                        <p>Pasokan terkunci</p>
-                        <span class="benefit-value">Dukungan harga</span>
-                    </div>
-                </div>
-
-                <!-- COMPARISON -->
-                <h4 style="font-size:12px;color:var(--text);margin:12px 0 6px;"><i class="fa-solid fa-table"></i>
-                    Pengguna Biasa vs Leader</h4>
-                <div class="guide-comparison">
-                    <div class="comp-row header">
-                        <span>Fitur</span>
-                        <span>Biasa</span>
-                        <span>Leader</span>
-                    </div>
-                    <div class="comp-row">
-                        <span class="comp-label">ROI Harian</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Ya</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Ya</span>
-                    </div>
-                    <div class="comp-row">
-                        <span class="comp-label">Bonus Referral</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Ya</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Ya</span>
-                    </div>
-                    <div class="comp-row">
-                        <span class="comp-label">Bonus Leader</span>
-                        <span class="comp-no"><i class="fa-solid fa-xmark"></i> Tidak</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Ya</span>
-                    </div>
-                    <div class="comp-row">
-                        <span class="comp-label">Batas Maks</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Berlaku</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Berlaku</span>
-                    </div>
-                    <div class="comp-row">
-                        <span class="comp-label">Bonus Leader Bebas Batas</span>
-                        <span class="comp-no"><i class="fa-solid fa-xmark"></i> N/A</span>
-                        <span class="comp-yes"><i class="fa-solid fa-check"></i> Ya</span>
-                    </div>
-                </div>
-
-                <!-- STEPS -->
-                <h4 style="font-size:12px;color:var(--text);margin:12px 0 6px;"><i class="fa-solid fa-list-check"></i>
+                <h4 style="font-size:12px;color:var(--text);margin:10px 0 6px;"><i class="fa-solid fa-list-check"></i>
                     Langkah demi Langkah</h4>
                 <div class="guide-steps">
-                    <div class="guide-step">
-                        <span class="step-number">1</span>
+                    <div class="guide-step"><span class="step-number">1</span>
                         <div class="step-content">
-                            <h4>Buka di Dompet Web3</h4>
-                            <p>Buka aplikasi dompet seluler Anda (TokenPocket, MetaMask, Trust Wallet) dan navigasikan
-                                ke
-                                <strong>recehstaking.github.io</strong>.
+                            <h4>Hubungkan Dompet Anda</h4>
+                            <p>Buka halaman staking dengan dompet Web3 dan hubungkan. Pastikan dompet menggunakan
+                                <strong>BNB Smart Chain</strong>.
                             </p>
-                            <span class="step-badge"><i class="fa-solid fa-mobile-screen-button"></i> Seluler</span>
                         </div>
                     </div>
-
-                    <div class="guide-step">
-                        <span class="step-number">2</span>
+                    <div class="guide-step"><span class="step-number">2</span>
                         <div class="step-content">
-                            <h4>Dapatkan Token RECEH</h4>
-                            <p>Beli <strong>$RECEH</strong> di <strong>PancakeSwap</strong> atau transfer dari dompet
-                                lain.</p>
-                            <button class="step-action outline"
-                                onclick="window.open('https://cryptoreceh.com/buy/','_blank')"
-                                style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Beli RECEH
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="guide-step">
-                        <span class="step-number">3</span>
-                        <div class="step-content">
-                            <h4>Hubungkan Dompet</h4>
-                            <p>Tekan <strong>"Hubungkan Dompet"</strong> di bagian atas. Pastikan Anda berada di
-                                <strong>BNB Smart
-                                    Chain</strong>.
+                            <h4>Siapkan RECEH &amp; BNB</h4>
+                            <p>Pastikan Anda memiliki jumlah <strong>$RECEH</strong> yang ingin di-stake dan simpan
+                                cukup
+                                <strong>BNB</strong> untuk biaya transaksi.
                             </p>
-                            <button class="step-action" onclick="document.getElementById('connectBtn').click()"
-                                style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-plug"></i> Hubungkan Sekarang
-                            </button>
                         </div>
                     </div>
-
-                    <div class="guide-step">
-                        <span class="step-number">4</span>
+                    <div class="guide-step"><span class="step-number">3</span>
                         <div class="step-content">
-                            <h4>Setujui &amp; Stake</h4>
-                            <p>Buka tab <strong>"Stake"</strong>, masukkan jumlah, klik <strong>"Setujui RECEH"</strong>
-                                lalu <strong>"Stake RECEH"</strong>.</p>
-                            <button class="step-action" onclick="showTab('stake')"
-                                style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-arrow-right"></i> Stake
-                            </button>
+                            <h4>Atur Referrer Anda</h4>
+                            <p>Jika Anda diundang oleh pengguna lain, gunakan tautan/alamat referral yang benar sebelum
+                                melakukan staking. Hubungan referrer dicatat oleh kontrak saat staking dibuat.</p>
                         </div>
                     </div>
-
-                    <div class="guide-step">
-                        <span class="step-number">5</span>
+                    <div class="guide-step"><span class="step-number">4</span>
                         <div class="step-content">
-                            <h4>Klaim Reward</h4>
-                            <p>Buka <strong>"Dasbor"</strong> dan klik <strong>"Klaim ROI"</strong> atau
-                                <strong>"Klaim Referral"</strong>.
-                            </p>
-                            <button class="step-action" onclick="showTab('dashboard')"
-                                style="font-size:9px;padding:3px 10px;min-height:22px;">
-                                <i class="fa-solid fa-arrow-right"></i> Dasbor
-                            </button>
+                            <h4>Setujui RECEH</h4>
+                            <p>Klik <strong>Setujui RECEH</strong> dan konfirmasi persetujuan token di dompet Anda. Ini
+                                memungkinkan kontrak staking menggunakan jumlah yang telah disetujui.</p>
+                        </div>
+                    </div>
+                    <div class="guide-step"><span class="step-number">5</span>
+                        <div class="step-content">
+                            <h4>Stake RECEH</h4>
+                            <p>Masukkan jumlah, periksa transaksi, lalu konfirmasi <strong>Stake RECEH</strong>. Tunggu
+                                hingga transaksi blockchain terkonfirmasi.</p>
+                        </div>
+                    </div>
+                    <div class="guide-step"><span class="step-number">6</span>
+                        <div class="step-content">
+                            <h4>Pantau Posisi Anda</h4>
+                            <p>Data dasbor menampilkan jumlah staking, perkembangan reward, reward tertunda, status
+                                batas, dan informasi lain yang berasal dari kontrak.</p>
+                        </div>
+                    </div>
+                    <div class="guide-step"><span class="step-number">7</span>
+                        <div class="step-content">
+                            <h4>Klaim ROI</h4>
+                            <p>Jika ROI tersedia, gunakan <strong>Klaim ROI</strong>. Dompet akan meminta Anda
+                                mengonfirmasi transaksi kontrak dan membayar biaya gas BNB yang diperlukan.</p>
+                        </div>
+                    </div>
+                    <div class="guide-step"><span class="step-number">8</span>
+                        <div class="step-content">
+                            <h4>Klaim Bonus Referral</h4>
+                            <p>Jika Anda memiliki reward referral yang memenuhi syarat, gunakan <strong>Klaim
+                                    Referral</strong>. Reward referral didasarkan pada jaringan dan aturan kontrak,
+                                bukan sekadar jumlah dompet dalam jaringan Anda.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- TIPS -->
-                <div
-                    style="margin-top:10px;padding:10px 12px;background:rgba(0,212,255,0.04);border-radius:var(--radius);border:1px solid rgba(0,212,255,0.06);">
-                    <h4 style="font-size:12px;color:var(--cyan);margin-bottom:4px;"><i
-                            class="fa-solid fa-lightbulb"></i> Tips Pro</h4>
-                    <ul style="font-size:10px;color:var(--text2);padding-left:16px;line-height:1.6;">
-                        <li><strong>Klaim secara teratur</strong> — ROI terakumulasi setiap detik</li>
-                        <li><strong>Bangun jaringan Anda</strong> — bagikan link referral untuk mendapatkan dari 10
-                            tingkat</li>
-                        <li><strong>Periksa progres batas</strong> — setelah 200% tercapai, hanya Bonus Leader yang
-                            berlanjut</li>
-                        <li><strong>Siapkan BNB untuk gas</strong> — Anda memerlukan BNB untuk setiap transaksi</li>
-                    </ul>
+                <h4 style="font-size:12px;color:var(--text);margin:14px 0 6px;"><i class="fa-solid fa-users"></i> Cara
+                    Kerja Referral 10 Level</h4>
+                <div class="notice info" style="font-size:10px;line-height:1.65;">
+                    Jaringan Anda dihitung berdasarkan kedalaman hubungan: <strong>L1</strong> adalah referral langsung
+                    Anda,
+                    <strong>L2</strong> adalah referral dari L1 Anda, dan seterusnya hingga <strong>L10</strong>.
+                    Persentase yang dikonfigurasi saat ini adalah: <strong>L1 10%</strong>, <strong>L2 3%</strong>,
+                    <strong>L3
+                        2%</strong>, <strong>L4 1.5%</strong>,
+                    <strong>L5 1%</strong>, <strong>L6 0.75%</strong>, <strong>L7 0.6%</strong>, <strong>L8
+                        0.5%</strong>, <strong>L9 0.4%</strong>, <strong>L10 0.25%</strong>. Penghasilan referral
+                    terkait dengan peristiwa reward dan aturan kelayakan yang ditentukan kontrak.
                 </div>
-
-                <!-- FAQ -->
+                <h4 style="font-size:12px;color:var(--text);margin:14px 0 6px;"><i class="fa-solid fa-calculator"></i>
+                    Cara Reward Ditampilkan</h4>
+                <div class="guide-comparison">
+                    <div class="comp-row header"><span>Item</span><span>Keterangan</span></div>
+                    <div class="comp-row"><span class="comp-label">ROI Harian</span><span>Akumulasi ROI saat ini
+                            berdasarkan parameter ROI harian kontrak dan jumlah staking Anda.</span></div>
+                    <div class="comp-row"><span class="comp-label">Referral Diperoleh</span><span>Reward referral yang
+                            tercatat dari hubungan referral dan peristiwa reward Anda.</span></div>
+                    <div class="comp-row"><span class="comp-label">Pending</span><span>Reward yang saat ini dapat
+                            diklaim berdasarkan status kontrak.</span></div>
+                    <div class="comp-row"><span class="comp-label">Max Cap</span><span>Batas kontrak yang digunakan
+                            untuk perhitungan reward terkait.</span></div>
+                </div>
+                <h4 style="font-size:12px;color:var(--text);margin:14px 0 6px;"><i class="fa-solid fa-lightbulb"></i>
+                    Praktik yang Baik</h4>
+                <ul style="font-size:10px;color:var(--text2);padding-left:18px;line-height:1.7;">
+                    <li>Periksa alamat kontrak sebelum menyetujui atau melakukan staking.</li>
+                    <li>Periksa detail transaksi di dompet sebelum menandatanganinya.</li>
+                    <li>Simpan BNB yang cukup untuk klaim dan transaksi lainnya.</li>
+                    <li>Gunakan tab Referral untuk memeriksa L1–L10, bukan hanya mengandalkan total utama.</li>
+                    <li>Verifikasi transaksi penting secara on-chain dan lakukan riset sendiri (DYOR).</li>
+                </ul>
                 <details class="faq" style="margin-top:10px;">
-                    <summary>📌 Apa itu RECEH Staking?</summary>
+                    <summary>Apakah RECEH yang di-stake dapat ditarik kembali?</summary>
                     <div>
-                        <p><strong>Receh Staking</strong> adalah program staking terdesentralisasi untuk token
-                            <strong>$RECEH</strong>
-                            di <strong>BNB Smart Chain</strong>.
-                        </p>
-                        <ul>
-                            <li>💰 ROI Harian — dihitung per detik</li>
-                            <li>🔗 Sistem Referral 10-Tingkat</li>
-                            <li>👑 Bonus Leader</li>
-                            <li>🛡️ Batas Maks 200%</li>
-                        </ul>
+                        <p>Menurut dokumentasi antarmuka dan aturan kontrak saat ini, RECEH yang di-stake terkunci
+                            secara permanen. Fungsi klaim digunakan untuk reward yang memenuhi syarat; fungsi tersebut
+                            bukan fungsi unstake.</p>
                     </div>
                 </details>
-
                 <details class="faq">
-                    <summary>💰 Berapa Banyak yang Bisa Saya Dapatkan?</summary>
+                    <summary>Apakah memiliki downline otomatis berarti mendapatkan penghasilan referral?</summary>
                     <div>
-                        <p><strong>ROI Harian:</strong> (Jumlah Stake × DailyROI_BPS) / 10000</p>
-                        <p><strong>Bonus Referral:</strong> Dapatkan dari semua 10 tingkat ketika downline mengklaim ROI
-                        </p>
-                        <p><strong>Bonus Leader:</strong> Bonus ekstra untuk leader terdaftar (bebas dari Batas)</p>
+                        <p>Tidak. Dompet yang berada dalam jaringan Anda tidak otomatis menjamin reward. Penghasilan
+                            referral bergantung pada peristiwa reward dan kondisi kelayakan kontrak.</p>
                     </div>
                 </details>
-
                 <details class="faq">
-                    <summary>🔗 Bagaimana Cara Kerja Referral?</summary>
+                    <summary>Di mana saya harus memeriksa nilai sebenarnya?</summary>
                     <div>
-                        <p>✅ <strong>SEMUA ORANG</strong> dengan staking aktif mendapatkan <strong>Bonus Referral
-                                10-Tingkat</strong> dari jaringan referral mereka!</p>
-                        <p>✅ <strong>TIDAK</strong> diperlukan status khusus — ini otomatis!</p>
-                        <p>Persyaratan: Staking aktif, belum mencapai Batas Maks, downline Anda mengklaim ROI.</p>
-                    </div>
-                </details>
-
-                <details class="faq">
-                    <summary>🛡️ Apa itu Batas Maks 200%?</summary>
-                    <div>
-                        <p><strong>Batas Maks = Jumlah Stake × 2</strong></p>
-                        <ul>
-                            <li>Contoh: Stake 100 $RECEH → Batas Maks = 200 $RECEH</li>
-                            <li>Setelah tercapai, tidak ada lagi ROI atau bonus referral</li>
-                            <li>Bonus Leader berlanjut (bebas dari Batas)</li>
-                        </ul>
-                    </div>
-                </details>
-
-                <details class="faq">
-                    <summary>❓ FAQ</summary>
-                    <div>
-                        <p><strong>Bisakah saya mendapatkan bonus referral?</strong> ✅ Ya! Siapa pun dengan staking
-                            aktif mendapatkan Bonus Referral 10-Tingkat.</p>
-                        <p><strong>Apakah saya perlu menjadi Leader?</strong> ❌ Tidak! Bonus referral untuk semua orang.
-                        </p>
-                        <p><strong>Bisakah saya menarik stake?</strong> ❌ TIDAK. RECEH yang di-stake terkunci secara
-                            permanen.</p>
-                        <p><strong>Kapan saya bisa klaim?</strong> ⏰ Kapan saja! Selama Anda memiliki reward tertunda.
+                        <p>Gunakan Dasbor dan tab Referral untuk melihat data dengan mudah, lalu verifikasi nilai dan
+                            transaksi penting terhadap smart contract yang diterapkan dan penjelajah BNB Smart Chain.
                         </p>
                     </div>
                 </details>
             </div>
         </section>
-
-        <!-- ============================================================
-        SECTION: DISCLAIMER
-        ============================================================ -->
-        <section id="disclaimer" class="section">
-            <div class="notice danger"><i class="fa-solid fa-triangle-exclamation"></i> Staking melibatkan risiko
-                smart-contract, pasar, likuiditas, jaringan, dan transaksi. Jangan pernah membagikan seed phrase atau
-                kunci pribadi Anda. Verifikasi kontrak dan detail transaksi di dompet Anda sebelum menandatangani.</div>
-
+        <section class="section" id="disclaimer">
             <div class="panel">
                 <div class="panel-title-row">
-                    <h2><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</h2>
-                    <span class="badge red">Peringatan Risiko</span>
+                    <h2><i class="fa-solid fa-circle-info"></i> Disclaimer &amp; DYOR</h2>
+                    <span class="badge blue">Baca Sebelum Menggunakan</span>
                 </div>
                 <div class="legal-content">
-                    <div class="notice danger" style="margin-bottom:12px;font-size:11px;">
-                        <i class="fa-solid fa-triangle-exclamation"></i>&nbsp;
-                        <strong style="color:#ff8c9c;">PERINGATAN RISIKO KRITIS</strong>
-                        <br><br>
-                        <span>Dengan menggunakan platform ini, Anda mengakui dan menerima risiko berikut.</span>
+                    <div class="notice info">
+                        RECEH Staking dirancang agar kontrak lebih mudah digunakan dan dipahami. Situs ini merupakan
+                        antarmuka untuk smart contract yang diterapkan; situs ini tidak menggantikan aturan atau status
+                        on-chain kontrak.
                     </div>
-
-                    <h2>1. Bukan Nasihat Keuangan</h2>
-                    <p>Semua informasi yang diberikan hanya untuk <strong>tujuan pendidikan dan informasi</strong>.</p>
-
-                    <h2>2. Investasi Berisiko Tinggi</h2>
-                    <p>Staking dan investasi cryptocurrency adalah <strong>kegiatan berisiko tinggi</strong>.</p>
-
-                    <h2>3. Penguncian Token Permanen</h2>
-                    <p><strong>Token RECEH yang di-stake TIDAK BISA ditarik</strong>. Hanya reward yang dapat diklaim.
-                    </p>
-
-                    <h2>4. Risiko Smart Contract</h2>
-                    <p>Meskipun telah diaudit, <strong>tidak ada smart contract yang sepenuhnya bebas risiko</strong>.
-                    </p>
-
-                    <h2>5. Jaringan &amp; Biaya Gas</h2>
-                    <p>Semua transaksi memerlukan <strong>BNB</strong> untuk biaya gas.</p>
-
-                    <h2>6. Tidak Ada Jaminan Keuntungan</h2>
-                    <p><strong>Kinerja masa lalu tidak menjamin hasil di masa depan</strong>.</p>
-
-                    <h2>7. Tanpa Tanggung Jawab</h2>
-                    <p>Pengembang dan afiliasi <strong>tidak bertanggung jawab</strong> atas kerugian apa pun.</p>
-
-                    <div class="highlight-box" style="margin-top:12px;">
-                        <p style="margin:0;font-weight:700;color:var(--text);font-size:12px;">
-                            <i class="fa-solid fa-circle-check" style="color:var(--green);"></i>
-                            Dengan menggunakan platform ini, Anda mengakui bahwa Anda telah membaca dan menerima semua
-                            risiko.
-                        </p>
+                    <h2>Baca Aturan Kontrak</h2>
+                    <p>Staking, perhitungan reward, hubungan referral, pengelolaan batas maksimum, dan klaim reward
+                        dikendalikan oleh kontrak yang diterapkan. Angka pada antarmuka ditampilkan untuk memudahkan
+                        pembacaan data tersebut dan dapat berubah setelah konfirmasi blockchain.</p>
+                    <h2>Pahami Sebelum Menandatangani</h2>
+                    <ul>
+                        <li>Pastikan Anda terhubung ke <strong>BNB Smart Chain</strong>.</li>
+                        <li>Periksa alamat kontrak dan detail transaksi yang ditampilkan.</li>
+                        <li>Pastikan Anda memahami jumlah yang akan disetujui atau di-stake.</li>
+                        <li>Sediakan BNB untuk biaya jaringan.</li>
+                        <li>Jangan pernah membagikan seed phrase atau private key Anda.</li>
+                    </ul>
+                    <h2>Staking &amp; Reward</h2>
+                    <p>RECEH yang di-stake terkunci secara permanen sesuai aturan kontrak saat ini. ROI dan reward
+                        referral tidak diberikan secara manual oleh halaman web ini; reward yang memenuhi syarat
+                        ditentukan dan dicatat melalui smart contract.</p>
+                    <h2>Informasi Pasar</h2>
+                    <p>Antarmuka staking menjelaskan cara kerja kontrak. Antarmuka ini tidak menentukan atau menjanjikan
+                        harga pasar RECEH di masa depan. Pengguna harus mengevaluasi token, kontrak, pasar, dan
+                        mekanismenya secara mandiri.</p>
+                    <h2>DYOR</h2>
+                    <div class="highlight-box">
+                        <p style="margin:0;font-weight:700;color:var(--text);font-size:12px;"><i
+                                class="fa-solid fa-magnifying-glass" style="color:var(--cyan);"></i> Lakukan riset
+                            sendiri. Baca aturan staking, periksa data on-chain, verifikasi alamat kontrak, dan hanya
+                            tanda tangani transaksi yang Anda pahami.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ============================================================
-        SECTION: TERMS
-        ============================================================ -->
-        <section id="terms" class="section">
+        <section class="section" id="terms">
             <div class="panel">
                 <div class="panel-title-row">
-                    <h2><i class="fa-solid fa-scale-balanced"></i> Syarat &amp; Ketentuan</h2>
-                    <span class="badge">Hukum</span>
+                    <h2><i class="fa-solid fa-scale-balanced"></i> Ketentuan Penggunaan</h2>
+                    <span class="badge">Aturan Platform</span>
                 </div>
                 <div class="legal-content">
-                    <div class="notice info" style="margin-bottom:12px;font-size:11px;">
-                        <i class="fa-solid fa-gavel"></i>&nbsp;
-                        <strong>Terakhir Diperbarui: Agustus 2026</strong>
+                    <div class="notice info" style="margin-bottom:12px;font-size:11px;"><strong>Terakhir Diperbarui:
+                            Agustus
+                            2026</strong> · Ketentuan ini menjelaskan cara penggunaan antarmuka RECEH Staking.
                     </div>
-
-                    <h2>1. Penerimaan Syarat</h2>
-                    <p>Dengan menggunakan platform RECEH Staking, Anda menyetujui Syarat &amp; Ketentuan ini.</p>
-
-                    <h2>2. Kelayakan</h2>
-                    <p>Anda harus berusia minimal 18 tahun dan memiliki kapasitas hukum untuk menyetujui syarat ini.</p>
-
-                    <h2>3. Penggunaan Platform</h2>
+                    <h2>1. Gunakan Jaringan yang Benar</h2>
+                    <p>Gunakan aplikasi staking di <strong>BNB Smart Chain</strong> dan pastikan jaringan di dompet Anda
+                        sudah benar sebelum berinteraksi dengan kontrak.</p>
+                    <h2>2. Kendali Dompet &amp; Transaksi</h2>
                     <ul>
-                        <li>Platform menyediakan antarmuka pengguna untuk berinteraksi dengan smart contract RECEH
-                            Staking.</li>
-                        <li>Semua transaksi dieksekusi di rantai melalui dompet Web3 Anda.</li>
-                        <li>Platform tidak menyimpan kunci pribadi atau data pribadi Anda.</li>
+                        <li>Dompet Anda tetap berada di bawah kendali Anda.</li>
+                        <li>Periksa setiap transaksi persetujuan, staking, dan klaim sebelum menandatanganinya.</li>
+                        <li>Jaga seed phrase dan private key Anda tetap rahasia.</li>
+                        <li>Simpan BNB yang cukup untuk membayar biaya transaksi blockchain.</li>
                     </ul>
-
-                    <h2>4. Smart Contract</h2>
+                    <h2>3. Aturan Staking</h2>
                     <ul>
-                        <li>Smart contract Receh Staking diterapkan di BNB Smart Chain.</li>
-                        <li>Semua transaksi staking dan reward diatur oleh kode kontrak.</li>
+                        <li>Staking dilakukan melalui smart contract RECEH Staking yang diterapkan.</li>
+                        <li>Jumlah yang Anda stake dan referrer yang digunakan saat staking dicatat sesuai aturan
+                            kontrak.</li>
+                        <li>RECEH yang di-stake terkunci secara permanen sesuai aturan kontrak saat ini.</li>
+                        <li>Akumulasi reward dan perhitungan batas maksimum mengikuti parameter dan status kontrak saat
+                            ini.</li>
                     </ul>
-
-                    <h2>5. Staking &amp; Reward</h2>
-                    <ul>
-                        <li>Token yang di-stake <strong>terkunci secara permanen</strong>.</li>
-                        <li>Reward didistribusikan sesuai dengan aturan kontrak.</li>
-                        <li>Reward pool terbatas dan dapat habis.</li>
-                    </ul>
-
-                    <h2>6. Batasan Tanggung Jawab</h2>
-                    <p><strong>Platform disediakan "sebagaimana adanya" tanpa jaminan apa pun.</strong></p>
-
+                    <h2>4. Aturan Referral</h2>
+                    <p>Sistem referral memiliki 10 level. Persentase yang dikonfigurasi disimpan dalam BPS dan saat ini
+                        adalah <strong>10%, 3%, 2%, 1.5%, 1%, 0.75%, 0.6%, 0.5%, 0.4%, dan 0.25%</strong>. Reward
+                        referral bergantung pada peristiwa reward dan kondisi kelayakan yang ditentukan kontrak.</p>
+                    <h2>5. Klaim</h2>
+                    <p>ROI dan reward referral diklaim melalui fungsi kontrak masing-masing. Klaim memerlukan transaksi
+                        blockchain dan biaya jaringan BNB. Jumlah yang tersedia untuk diklaim ditentukan oleh status
+                        kontrak pada saat transaksi.</p>
+                    <h2>6. Antarmuka vs. Status On-chain</h2>
+                    <p>Situs ini menyediakan antarmuka yang mudah dibaca untuk data kontrak. Status blockchain menjadi
+                        acuan untuk posisi staking, catatan referral, saldo reward, dan transaksi yang telah
+                        dikonfirmasi. Perbedaan tampilan sementara dapat terjadi saat transaksi masih menunggu
+                        konfirmasi.</p>
+                    <h2>7. Verifikasi &amp; Gunakan dengan Bertanggung Jawab</h2>
+                    <p>Gunakan alamat kontrak yang ditampilkan, periksa konfirmasi di dompet, verifikasi transaksi
+                        penting secara on-chain, dan lakukan riset sendiri sebelum menggunakan fitur staking.</p>
                     <div class="highlight-box" style="margin-top:12px;">
-                        <p style="margin:0;font-weight:700;color:var(--text);font-size:12px;">
-                            <i class="fa-solid fa-circle-check" style="color:var(--green);"></i>
-                            Dengan menggunakan Platform, Anda mengakui bahwa Anda telah membaca dan menyetujui Syarat
-                            ini.
-                        </p>
+                        <p style="margin:0;font-weight:700;color:var(--text);font-size:12px;"><i
+                                class="fa-solid fa-circle-check" style="color:var(--green);"></i> Pahami aturan →
+                            periksa data → tinjau transaksi → tanda tangani hanya jika Anda memahaminya.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ============================================================
-        SECTION: OWNER
-        ============================================================ -->
-        <section id="owner" class="section">
-            <div id="ownerWarning" class="notice danger" style="font-size:11px;">Panel owner dibatasi untuk pemilik
-                kontrak.</div>
+        <section class="section" id="owner">
+            <div class="notice danger" id="ownerWarning" style="font-size:11px;">Panel pemilik hanya dapat diakses oleh
+                pemilik kontrak.</div>
             <div style="height:10px"></div>
             <div class="cols">
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Pengaturan Kontrak</h2><span class="badge red">Owner saja</span>
+                        <h2>Pengaturan Kontrak</h2><span class="badge red">Khusus Pemilik</span>
                     </div>
                     <div class="form">
-                        <div><label class="label">Stake Minimum ($RECEH)</label><input id="oMinStake"
-                                inputmode="decimal" style="font-size:12px;padding:6px 10px;"></div>
-                        <button id="setMinStake" style="font-size:10px;padding:5px 12px;min-height:28px;">Perbarui Stake
-                            Minimum</button>
-                        <div><label class="label">ROI Harian (BPS)</label><input id="oRoi" inputmode="numeric"
-                                style="font-size:12px;padding:6px 10px;"></div>
+                        <div><label class="label">Staking Minimum ($RECEH)</label><input id="oMinStake"
+                                inputmode="decimal" style="font-size:12px;padding:6px 10px;" /></div>
+                        <button id="setMinStake" style="font-size:10px;padding:5px 12px;min-height:28px;">Perbarui
+                            Staking Minimum</button>
+                        <div><label class="label">Daily ROI (BPS)</label><input id="oRoi" inputmode="numeric"
+                                style="font-size:12px;padding:6px 10px;" /></div>
                         <button id="setRoi" style="font-size:10px;padding:5px 12px;min-height:28px;">Perbarui ROI
                             Harian</button>
                         <div><label class="label">Bonus Leader (BPS)</label><input id="oLeaderBps" inputmode="numeric"
-                                style="font-size:12px;padding:6px 10px;"></div>
+                                style="font-size:12px;padding:6px 10px;" /></div>
                         <button id="setLeaderBps" style="font-size:10px;padding:5px 12px;min-height:28px;">Perbarui
                             Bonus Leader</button>
                     </div>
                 </div>
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Referral 10-Tingkat</h2><span class="badge red">Owner saja</span>
+                        <h2>Referral 10 Level</h2><span class="badge red">Khusus Pemilik</span>
                     </div>
-                    <div id="levelInputs" class="form"></div>
+                    <div class="form" id="levelInputs"></div>
                     <button id="setLevels"
                         style="margin-top:8px;font-size:10px;padding:5px 12px;min-height:28px;">Perbarui Semua 10
-                        Tingkat</button>
+                        Levels</button>
                 </div>
             </div>
             <div class="cols" style="margin-top:12px">
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Manajemen Leader</h2><span class="badge red">Owner saja</span>
+                        <h2>Manajemen Leader</h2><span class="badge red">Khusus Pemilik</span>
                     </div>
                     <div class="form">
-                        <input id="leaderAddress" placeholder="Dompet Leader 0x..."
-                            style="font-size:12px;padding:6px 10px;">
+                        <input id="leaderAddress" placeholder="Dompet leader 0x..."
+                            style="font-size:12px;padding:6px 10px;" />
                         <select id="leaderStatus" style="font-size:12px;padding:6px 10px;">
                             <option value="true">Daftarkan / Aktifkan</option>
                             <option value="false">Cabut / Nonaktifkan</option>
                         </select>
-                        <button id="setLeader" class="primary"
+                        <button class="primary" id="setLeader"
                             style="font-size:10px;padding:5px 12px;min-height:28px;">Perbarui Leader</button>
                     </div>
                 </div>
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Stake Admin</h2><span class="badge red">Owner saja</span>
+                        <h2>Staking Admin</h2><span class="badge red">Khusus Pemilik</span>
                     </div>
                     <div class="form">
-                        <input id="adminUser" placeholder="Dompet Pengguna 0x..."
-                            style="font-size:12px;padding:6px 10px;">
+                        <input id="adminUser" placeholder="Dompet pengguna 0x..."
+                            style="font-size:12px;padding:6px 10px;" />
                         <input id="adminAmount" inputmode="decimal" placeholder="Jumlah RECEH"
-                            style="font-size:12px;padding:6px 10px;">
+                            style="font-size:12px;padding:6px 10px;" />
                         <input id="adminReferrer" placeholder="Referrer opsional 0x..."
-                            style="font-size:12px;padding:6px 10px;">
-                        <button id="adminStake" class="primary"
-                            style="font-size:10px;padding:5px 12px;min-height:28px;">Stake Admin</button>
-                        <div class="notice danger small" style="font-size:9px;">Ini memanggil fungsi adminStake().</div>
+                            style="font-size:12px;padding:6px 10px;" />
+                        <button class="primary" id="adminStake"
+                            style="font-size:10px;padding:5px 12px;min-height:28px;">Staking Admin</button>
+                        <div class="notice danger small" style="font-size:9px;">Ini memanggil fungsi adminStake().
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="panel" style="margin-top:12px">
                 <div class="panel-title-row">
-                    <h2>Pulihkan ERC-20</h2><span class="badge red">Owner saja</span>
+                    <h2>Pulihkan ERC-20</h2><span class="badge red">Khusus Pemilik</span>
                 </div>
                 <div class="form">
                     <div class="row">
                         <input id="recoverToken" placeholder="Alamat token ERC-20"
-                            style="font-size:12px;padding:6px 10px;">
+                            style="font-size:12px;padding:6px 10px;" />
                         <input id="recoverAmount" inputmode="decimal" placeholder="Jumlah token"
-                            style="font-size:12px;padding:6px 10px;">
+                            style="font-size:12px;padding:6px 10px;" />
                     </div>
-                    <button id="recoverBtn" class="danger"
-                        style="font-size:10px;padding:5px 12px;min-height:28px;">Pulihkan ERC-20 ke Owner</button>
-                    <div class="notice danger small" style="font-size:9px;">Ini memanggil fungsi recoverERC20().</div>
+                    <button class="danger" id="recoverBtn"
+                        style="font-size:10px;padding:5px 12px;min-height:28px;">Pulihkan ERC-20 ke Pemilik</button>
+                    <div class="notice danger small" style="font-size:9px;">Ini memanggil fungsi recoverERC20().
+                    </div>
                 </div>
             </div>
             <div class="cols" style="margin-top:12px">
                 <div class="panel">
                     <div class="panel-title-row">
-                        <h2>Manajemen Kepemilikan</h2><span class="badge red">Owner saja</span>
+                        <h2>Manajemen Kepemilikan</h2><span class="badge red">Khusus Pemilik</span>
                     </div>
                     <div class="form">
                         <div
                             style="border:1px solid rgba(255,83,107,0.2);border-radius:var(--radius);padding:8px 10px;background:rgba(255,83,107,0.05);">
-                            <label class="label" style="color:var(--red);font-size:10px;">⚠️ Hati-hati! Tindakan ini
+                            <label class="label" style="color:var(--red);font-size:10px;">⚠️ Perhatian! Tindakan ini
                                 tidak dapat dibatalkan.</label>
                         </div>
                         <button id="renounceOwnershipBtn"
                             style="background:#dc2626 !important;box-shadow:0 3px 0 #991b1b !important;border-bottom:2px solid #991b1b !important;font-size:10px;padding:5px 12px;min-height:28px;">
-                            <i class="fa-solid fa-skull"></i>&nbsp; Lepaskan Kepemilikan
+                            <i class="fa-solid fa-skull"></i>  Lepaskan Kepemilikan
                         </button>
                         <div style="display:grid;grid-template-columns:1fr auto;gap:6px;align-items:end;">
                             <div>
-                                <label class="label">Alamat Owner Baru</label>
+                                <label class="label">Alamat Pemilik Baru</label>
                                 <input id="transferOwnerAddress" placeholder="0x... (alamat baru)"
-                                    style="font-size:12px;padding:6px 10px;">
+                                    style="font-size:12px;padding:6px 10px;" />
                             </div>
                             <button id="transferOwnershipBtn"
                                 style="white-space:nowrap;font-size:10px;padding:5px 12px;min-height:28px;"><i
-                                    class="fa-solid fa-arrow-right-arrow-left"></i>&nbsp; Transfer</button>
+                                    class="fa-solid fa-arrow-right-arrow-left"></i>  Transfer</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-links">
-                <a href="https://cryptoreceh.com/buy/" target="_blank" rel="nofollow">
+                <a href="https://tokoreceh.github.io/buy/" rel="nofollow" target="_blank">
                     <i class="fa-solid fa-cart-plus"></i> Beli RECEH
                 </a>
                 <a href="javascript:void(0)" onclick="showTab('about')">
@@ -1197,50 +1045,51 @@
                     <i class="fa-solid fa-triangle-exclamation"></i> Disclaimer
                 </a>
                 <a href="javascript:void(0)" onclick="showTab('terms')">
-                    <i class="fa-solid fa-scale-balanced"></i> Syarat
+                    <i class="fa-solid fa-scale-balanced"></i> Ketentuan
                 </a>
             </div>
-            <div class="footer-note">© 2026 Crypto Receh • BNB Smart Chain</div>
+            <div class="footer-note">© 2026 Receh on GitHub • BNB Smart Chain</div>
         </footer>
-
     </main>
-
     <!-- ============================================================
     POPUP DISCLAIMER
     ============================================================ -->
-    <div id="disclaimerPopup" class="popup-overlay">
+    <div class="popup-overlay" id="disclaimerPopup">
         <div class="popup-box">
             <div class="popup-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
             <div class="popup-content">
                 <h3>DISCLAIMER</h3>
-                <p>Staking adalah aktivitas berisiko tinggi. Nilai aset crypto dapat berfluktuasi secara signifikan.
-                    Pastikan Anda memahami risiko yang terlibat sebelum melakukan staking. Platform ini tidak menjamin
-                    keuntungan dan tidak bertanggung jawab atas potensi kerugian apa pun. Selalu lakukan riset sendiri
-                    (<strong>DYOR</strong>) dan gunakan <b>$RECEH</b> yang Anda siap untuk kehilangan.</p>
-                <button id="disclaimerAccept" class="popup-btn"><i class="fa-solid fa-check"></i> Klik Jika Anda
-                    Mengerti</button>
+                <p>Staking merupakan aktivitas berisiko tinggi. Nilai aset kripto dapat berfluktuasi secara signifikan.
+                    Pastikan Anda
+                    memahami risiko yang terlibat sebelum melakukan staking. Platform ini tidak menjamin keuntungan dan
+                    tidak bertanggung jawab atas potensi kerugian. Selalu lakukan riset sendiri (<strong>DYOR</strong>)
+                    dan
+                    hanya gunakan <b>$RECEH</b> yang siap Anda tanggung jika hilang.</p>
+                <button class="popup-btn" id="disclaimerAccept"><i class="fa-solid fa-check"></i> Klik Jika Anda
+                    Memahami</button>
             </div>
         </div>
     </div>
-
     <!-- ============================================================
     NOTIFICATION
     ============================================================ -->
-    <div id="notifyOverlay" class="notify-overlay">
-        <div id="notifyBox" class="notify-box info">
-            <div id="notifyIcon" class="notify-icon">ℹ</div>
-            <div id="notifyTitle" class="notify-title">Notifikasi</div>
-            <div id="notifyMessage" class="notify-message"></div>
-            <button id="notifyClose" class="notify-action">OK</button>
+    <div aria-hidden="true" class="notify-overlay" id="notifyOverlay">
+        <div aria-labelledby="notifyTitle" aria-modal="true" class="notify-box info" id="notifyBox" role="dialog">
+            <div class="notify-icon" id="notifyIcon">ℹ</div>
+            <div class="notify-title" id="notifyTitle">Notifikasi</div>
+            <div class="notify-message" id="notifyMessage"></div>
+            <div class="notify-details" id="notifyDetails" style="display:none;"></div>
+            <div class="notify-buttons" id="notifyButtons">
+                <button class="notify-action" hidden="" id="notifyAction"></button>
+                <button class="notify-close" id="notifyClose" type="button">OK</button>
+            </div>
         </div>
     </div>
-
     <!-- ============================================================
     JAVASCRIPT FILES
     ============================================================ -->
     <script src="js/app.js"></script>
     <script src="js/tvl.js"></script>
-
     <!-- ============================================================ -->
     <!-- PREVENT PINCH ZOOM ON MOBILE - ADDED -->
     <!-- ============================================================ -->
@@ -1273,7 +1122,6 @@
             }
         })();
     </script>
-
 </body>
 
 </html>
