@@ -2424,15 +2424,15 @@ Transaction: ${short(receipt.hash)}`,
           }))
         : [
             { level: 1, bps: 1000, pct: 10 },
-            { level: 2, bps: 300, pct: 3 },
-            { level: 3, bps: 200, pct: 2 },
-            { level: 4, bps: 150, pct: 1.5 },
-            { level: 5, bps: 100, pct: 1 },
-            { level: 6, bps: 75, pct: 0.75 },
-            { level: 7, bps: 60, pct: 0.6 },
-            { level: 8, bps: 50, pct: 0.5 },
-            { level: 9, bps: 40, pct: 0.4 },
-            { level: 10, bps: 25, pct: 0.25 },
+            { level: 2, bps: 500, pct: 5 },
+            { level: 3, bps: 350, pct: 3.5 },
+            { level: 4, bps: 300, pct: 3 },
+            { level: 5, bps: 250, pct: 2.5 },
+            { level: 6, bps: 200, pct: 2 },
+            { level: 7, bps: 150, pct: 1.5 },
+            { level: 8, bps: 125, pct: 1.25 },
+            { level: 9, bps: 75, pct: 0.75 },
+            { level: 10, bps: 50, pct: 0.5 },
           ];
 
     const downlineRoiDaily = downlineStake * (roiDailyPercent / 100);
