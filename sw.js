@@ -1,5 +1,0 @@
-const CACHE_NAME="receh-staking-bsc-shell-v4";
-const APP_SHELL=["/","/index.html","/manifest.webmanifest","/icons/icon-192.png","/icons/icon-512.png","/images/favicon.png"];
-self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(APP_SHELL)).then(()=>self.skipWaiting())));
-self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME&&k.startsWith("receh-staking")).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
-self.addEventListener("fetch",e=>{const r=e.request;if(r.method!=="GET")return;const u=new URL(r.url);if(u.origin!==self.location.origin)return;if(r.mode==="navigate"){e.respondWith(fetch(r).catch(()=>caches.match("/index.html")));return}const staticAsset=u.pathname.startsWith("/assets/")||u.pathname.startsWith("/icons/")||u.pathname.startsWith("/images/")||u.pathname==="/manifest.webmanifest"||u.pathname==="/favicon.ico";if(!staticAsset)return;e.respondWith(caches.match(r).then(cached=>cached||fetch(r).then(res=>{if(res.ok)caches.open(CACHE_NAME).then(c=>c.put(r,res.clone()));return res}))) });
